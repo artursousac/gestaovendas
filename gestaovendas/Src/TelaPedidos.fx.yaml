@@ -1216,10 +1216,16 @@ TelaPedidos As screen:
                     Selectable: =false
                     TabIndex: =0
                     TemplateFill: =
-                    TemplateSize: |
-                        =60
+                    TemplateSize: =80
                     Width: =Parent.Width-Self.X*2
                     ZIndex: =3
+
+                    Container1 As groupContainer.manualLayoutContainer:
+                        Height: =60
+                        Width: =1850
+                        X: =10
+                        Y: =10
+                        ZIndex: =1
 
                     ctn_ItemsGalleryControleChaves As groupContainer.horizontalAutoLayoutContainer:
                         Fill: =Cor.GallerySeparator
@@ -1234,7 +1240,7 @@ TelaPedidos As screen:
                         RadiusTopLeft: =5
                         RadiusTopRight: =5
                         Width: =1
-                        ZIndex: =1
+                        ZIndex: =2
 
                         btn_FundoID As button:
                             AlignInContainer: =AlignInContainer.Center
@@ -1405,8 +1411,9 @@ TelaPedidos As screen:
                         RadiusTopLeft: =0
                         RadiusTopRight: =0
                         Width: =205
-                        X: =1665
-                        ZIndex: =7
+                        X: =1655
+                        Y: =10
+                        ZIndex: =3
 
                         icn_VisualizarSolicitacao As icon.Edit:
                             BorderColor: =Cor.Border
