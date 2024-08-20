@@ -1,0 +1,125 @@
+{
+  "ComponentIndexes": {},
+  "ControlUniqueGuids": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "btn_Entrar_TelaInicial": 34,
+    "ctn_FundoLogin_TelaInicial": 22,
+    "ctn_Loading_Controle": 38,
+    "ctn_Login_TelaInicial": 23,
+    "ctn_Senha_TelaInicial": 29,
+    "ctn_Usuario_TelaInicial": 26,
+    "Host": 3,
+    "img_Loading_Controle": 39,
+    "inpt_Senha_TelaInicial": 31,
+    "inpt_Usuario_TelaInicial": 28,
+    "lbl_Ação_TelaInicial": 25,
+    "lbl_BoasVindas_TelaInicial": 24,
+    "lbl_EsqueciSenha_TelaInicial": 33,
+    "lbl_Senha_TelaInicial": 30,
+    "lbl_Usuario_TelaInicial": 27,
+    "TelaInicial": 4,
+    "TelaPrincipal": 37
+  },
+  "FunctionParamsInvariantScripts": {},
+  "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "08/20/2024 00:58:12",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {
+    "7d0bb00c-0459-438b-8eb1-bdee43a87f20": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-697cf919-1deb-48c4-8148-b5ab5f49a81b\""
+  },
+  "LocalDatabaseReferencesAsEmpty": true,
+  "LocalResourceFileNames": {
+    "Data report-pana": "7f5940cf-3f51-4017-9fe3-c94ae7be6cab.svg",
+    "product-loading": "4046b046-e21b-4ed0-b2f6-156aa45741b4.gif"
+  },
+  "LocalResourceRootPaths": {
+    "Data report-pana": "https://docserverpwaprodsbr.blob.core.windows.net/b26b868c-dfd8-40d8-bb49-7509e8460cd6-1/resource/452477c6-e147-4eff-85cb-9fc3ab3b10c3.svg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-08-20T00%3A28%3A51Z&ske=2024-08-21T00%3A43%3A51Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2024-08-21T00%3A43%3A51Z&sr=b&sp=r&sig=UjAS3KKNxEnKrP4qTtTTNm0U9Eh59Ru96BPg4B%2B%2BKhg%3D",
+    "product-loading": "https://docserverpwaprodsbr.blob.core.windows.net/b26b868c-dfd8-40d8-bb49-7509e8460cd6-1/resource/ca3fee0c-bee0-4de7-9dce-d023b96359a7.gif?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-08-20T00%3A48%3A52Z&ske=2024-08-21T01%3A03%3A52Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2024-08-21T01%3A03%3A52Z&sr=b&sp=r&sig=GPjNhFpKb9s2J3FMDiO7BdKkSgiqxdtmYRCv571D7v0%3D"
+  },
+  "OrderComponentMetadata": {},
+  "OrderComponentTemplate": {},
+  "OrderDataSource": {
+    "Clientes": 0,
+    "Credencial": 1,
+    "EnderecoCliente": 2,
+    "ImagensReferencia": 3,
+    "LotePedidos": 4,
+    "Pedidos": 5,
+    "Referencias": 6,
+    "Vendedor": 7
+  },
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "button": 3,
+    "groupContainer": 0,
+    "image": 4,
+    "label": 1,
+    "text": 2
+  },
+  "OverridablePropertiesEntry": {
+    "App": {},
+    "btn_Entrar_TelaInicial": {},
+    "ctn_FundoLogin_TelaInicial": {},
+    "ctn_Loading_Controle": {},
+    "ctn_Login_TelaInicial": {},
+    "ctn_Senha_TelaInicial": {},
+    "ctn_Usuario_TelaInicial": {},
+    "Host": {},
+    "img_Loading_Controle": {},
+    "inpt_Senha_TelaInicial": {},
+    "inpt_Usuario_TelaInicial": {},
+    "lbl_Ação_TelaInicial": {},
+    "lbl_BoasVindas_TelaInicial": {},
+    "lbl_EsqueciSenha_TelaInicial": {},
+    "lbl_Senha_TelaInicial": {},
+    "lbl_Usuario_TelaInicial": {},
+    "TelaInicial": {},
+    "TelaPrincipal": {}
+  },
+  "PCFDynamicSchemaForIRRetrievalEntry": {},
+  "PCFTemplateEntry": {},
+  "PublishOrderIndices": {
+    "App": 0,
+    "btn_Entrar_TelaInicial": 11,
+    "ctn_FundoLogin_TelaInicial": 0,
+    "ctn_Loading_Controle": 12,
+    "ctn_Login_TelaInicial": 1,
+    "ctn_Senha_TelaInicial": 7,
+    "ctn_Usuario_TelaInicial": 4,
+    "Host": 0,
+    "img_Loading_Controle": 13,
+    "inpt_Senha_TelaInicial": 9,
+    "inpt_Usuario_TelaInicial": 6,
+    "lbl_Ação_TelaInicial": 3,
+    "lbl_BoasVindas_TelaInicial": 2,
+    "lbl_EsqueciSenha_TelaInicial": 10,
+    "lbl_Senha_TelaInicial": 8,
+    "lbl_Usuario_TelaInicial": 5,
+    "TelaInicial": 0,
+    "TelaPrincipal": 0
+  },
+  "ResourcesJsonIndices": {
+    "Image-Data report-pana": 1,
+    "Image-product-loading": 2,
+    "Image-SampleImage": 0
+  },
+  "RuleScreenIdWithoutScreen": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.0721583,
+    "ControlCount": {
+      "button": 1,
+      "form": 1,
+      "groupContainer": 10,
+      "icon": 3,
+      "image": 4,
+      "label": 8,
+      "rectangle": 2,
+      "text": 2
+    }
+  },
+  "WasLocalDatabaseReferencesEmpty": true
+}
