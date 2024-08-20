@@ -57,7 +57,7 @@ TelaPedidos As screen:
                         <path d='M256,48C141.31,48,48,141.31,48,256s93.31,208,208,208,208-93.31,208-208S370.69,48,256,48Zm80,224H272v64a16,16,0,0,1-32,0V272H176a16,16,0,0,1,0-32h64V176a16,16,0,0,1,32,0v64h64a16,16,0,0,1,0,32Z'/></svg>
                         "
                         ,
-                        IconText:"Gerenciar Chaves",
+                        IconText:"Clientes",
                         IconColor: TCor.TextInverted,
                         TextColor:TCor.TextInverted,
                         TextSize:16,
@@ -187,10 +187,10 @@ TelaPedidos As screen:
                     =With({
                         IconSVG:
                         "
-                        <path d='M218.1,167.17c0,13,0,25.6,4.1,37.4-43.1,50.6-156.9,184.3-167.5,194.5a20.17,20.17,0,0,0-6.7,15c0,8.5,5.2,16.7,9.6,21.3,6.6,6.9,34.8,33,40,28,15.4-15,18.5-19,24.8-25.2,9.5-9.3-1-28.3,2.3-36s6.8-9.2,12.5-10.4,15.8,2.9,23.7,3c8.3.1,12.8-3.4,19-9.2,5-4.6,8.6-8.9,8.7-15.6.2-9-12.8-20.9-3.1-30.4s23.7,6.2,34,5,22.8-15.5,24.1-21.6-11.7-21.8-9.7-30.7c.7-3,6.8-10,11.4-11s25,6.9,29.6,5.9c5.6-1.2,12.1-7.1,17.4-10.4,15.5,6.7,29.6,9.4,47.7,9.4,68.5,0,124-53.4,124-119.2S408.5,48,340,48,218.1,101.37,218.1,167.17ZM400,144a32,32,0,1,1-32-32A32,32,0,0,1,400,144Z'/></svg>
+                        <path d='M256,48C141.31,48,48,141.31,48,256s93.31,208,208,208,208-93.31,208-208S370.69,48,256,48Zm80,224H272v64a16,16,0,0,1-32,0V272H176a16,16,0,0,1,0-32h64V176a16,16,0,0,1,32,0v64h64a16,16,0,0,1,0,32Z'/></svg>
                         "
                         ,
-                        IconText:"Solicitar Chave",
+                        IconText:"Novo Pedido",
                         IconColor: TCor.TextInverted,
                         TextColor:TCor.TextInverted,
                         TextSize:16,
@@ -1220,7 +1220,7 @@ TelaPedidos As screen:
                     Selectable: =false
                     TabIndex: =0
                     TemplateFill: =
-                    TemplateSize: =80
+                    TemplateSize: =65
                     Width: =Parent.Width-Self.X*2
                     ZIndex: =3
 
@@ -1232,7 +1232,7 @@ TelaPedidos As screen:
                         ZIndex: =1
 
                     ctn_ItemsGalleryControleChaves As groupContainer.horizontalAutoLayoutContainer:
-                        Fill: =Cor.GallerySeparator
+                        Fill: =Cor.BackgroundScreen
                         Height: =ctn_Fundo_Pedidos.Height
                         LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutGap: =10
@@ -1243,7 +1243,7 @@ TelaPedidos As screen:
                         RadiusBottomRight: =5
                         RadiusTopLeft: =5
                         RadiusTopRight: =5
-                        Width: =Parent.Width-20-ctn_Ações.Width-10
+                        Width: =Parent.Width-20
                         X: =10
                         Y: =ctn_Fundo_Pedidos.Y
                         ZIndex: =2
@@ -1290,6 +1290,7 @@ TelaPedidos As screen:
 
                         lbl_Chave_GalleryControleChaves As label:
                             Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
                             BorderColor: =Cor.Border
                             Color: =Cor.TextStandard
                             DisabledColor: =Cor.DisabledText
@@ -1405,118 +1406,94 @@ TelaPedidos As screen:
                             Y: =10
                             ZIndex: =9
 
-                    ctn_Ações As groupContainer.horizontalAutoLayoutContainer:
-                        BorderStyle: =BorderStyle.None
-                        DropShadow: =DropShadow.None
-                        Height: =60
-                        LayoutAlignItems: =LayoutAlignItems.Center
-                        LayoutMode: =LayoutMode.Auto
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Width: =205
-                        X: =1655
-                        Y: =10
-                        ZIndex: =3
+                        ctn_Ações As groupContainer.horizontalAutoLayoutContainer:
+                            BorderStyle: =BorderStyle.None
+                            DropShadow: =DropShadow.None
+                            Fill: =Cor.BackgroundScreen
+                            Height: =60
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                            LayoutMinHeight: =0
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Width: =205
+                            X: =1654
+                            Y: =10
+                            ZIndex: =10
 
-                        icn_VisualizarSolicitacao As icon.Edit:
-                            BorderColor: =Cor.Border
-                            Color: =Cor.Primary
-                            DisabledBorderColor: =Cor.Disabled
-                            DisabledColor: =Cor.Disabled
-                            FocusedBorderThickness: =0
-                            Height: =40
-                            HoverColor: =ColorFade(Self.Color, 10%)
-                            HoverFill: =Cor.TransparentLight
-                            Icon: =Icon.View
-                            LayoutMinWidth: =40
-                            OnSelect: |-
-                                =UpdateContext({ctxRegistroSelecionado: ThisItem});
-                                UpdateContext({ctxVisualizarSolicitacao: true})
-                            PaddingBottom: =10
-                            PaddingLeft: |
-                                =10
-                            PaddingRight: =10
-                            PaddingTop: =10
-                            Width: =45
-                            X: =1099
-                            ZIndex: =1
+                            icn_VisualizarSolicitacao As icon.Edit:
+                                BorderColor: =Cor.Border
+                                Color: =Cor.Primary
+                                DisabledBorderColor: =Cor.Disabled
+                                DisabledColor: =Cor.Disabled
+                                FocusedBorderThickness: =0
+                                Height: =40
+                                HoverColor: =ColorFade(Self.Color, 10%)
+                                HoverFill: =Cor.TransparentLight
+                                Icon: =Icon.View
+                                LayoutMinWidth: =40
+                                OnSelect: |-
+                                    =UpdateContext({ctxRegistroSelecionado: ThisItem});
+                                    UpdateContext({ctxVisualizarSolicitacao: true})
+                                PaddingBottom: =10
+                                PaddingLeft: |
+                                    =10
+                                PaddingRight: =10
+                                PaddingTop: =10
+                                Width: =45
+                                X: =1099
+                                ZIndex: =1
 
-                        icn_EditarSolicitacao As icon.Edit:
-                            BorderColor: =Cor.Border
-                            Color: =Cor.Primary
-                            DisabledBorderColor: =Cor.Disabled
-                            DisabledColor: =Cor.Disabled
-                            FocusedBorderThickness: =0
-                            Height: =45
-                            HoverColor: =ColorFade(Self.Color, 10%)
-                            HoverFill: =Cor.TransparentLight
-                            Icon: =Icon.Edit
-                            LayoutMinWidth: =40
-                            OnSelect: |-
-                                =UpdateContext({ctxRegistroSelecionado: ThisItem});
-                                UpdateContext({ctxEditarSolicitacao: true})
-                            PaddingBottom: =10
-                            PaddingLeft: =10
-                            PaddingRight: =10
-                            PaddingTop: =10
-                            Width: =54
-                            X: =54
-                            ZIndex: =2
+                            icn_EditarSolicitacao As icon.Edit:
+                                BorderColor: =Cor.Border
+                                Color: =Cor.Primary
+                                DisabledBorderColor: =Cor.Disabled
+                                DisabledColor: =Cor.Disabled
+                                FocusedBorderThickness: =0
+                                Height: =45
+                                HoverColor: =ColorFade(Self.Color, 10%)
+                                HoverFill: =Cor.TransparentLight
+                                Icon: =Icon.Edit
+                                LayoutMinWidth: =40
+                                OnSelect: |-
+                                    =UpdateContext({ctxRegistroSelecionado: ThisItem});
+                                    UpdateContext({ctxEditarSolicitacao: true})
+                                PaddingBottom: =10
+                                PaddingLeft: =10
+                                PaddingRight: =10
+                                PaddingTop: =10
+                                Width: =54
+                                X: =54
+                                ZIndex: =2
 
-                        icn_ExcluirSolicitacao As icon.Edit:
-                            BorderColor: =Cor.Border
-                            Color: =Cor.Primary
-                            DisabledBorderColor: =Cor.Disabled
-                            DisabledColor: =Cor.Disabled
-                            FocusedBorderThickness: =0
-                            Height: =45
-                            HoverColor: =ColorFade(Self.Color, 10%)
-                            HoverFill: =Cor.TransparentLight
-                            Icon: =Icon.Trash
-                            LayoutMinWidth: =40
-                            OnSelect: |-
-                                =Concurrent(
-                                    UpdateContext({ctxRegistroSelecionado: ThisItem}),
-                                    UpdateContext({ctxExcluirSolicitacao: true})
-                                )
-                            PaddingBottom: =10
-                            PaddingLeft: |
-                                =10
-                            PaddingRight: =10
-                            PaddingTop: =10
-                            Width: =54
-                            X: =162
-                            ZIndex: =3
-
-                        icn_AprovarSolicitacao As icon.Edit:
-                            AlignInContainer: =AlignInContainer.Center
-                            BorderColor: =Cor.Border
-                            Color: =Cor.Primary
-                            DisabledBorderColor: =Cor.Disabled
-                            DisabledColor: =Cor.Disabled
-                            FocusedBorderThickness: =0
-                            Height: =45
-                            HoverColor: =ColorFade(Self.Color, 10%)
-                            HoverFill: =Cor.TransparentLight
-                            Icon: =Icon.LikeDislike
-                            LayoutMinWidth: =40
-                            OnSelect: |-
-                                =UpdateContext({ctxRegistroSelecionado: ThisItem});
-                                If(
-                                    ThisItem.Status = "Pendente Retirada" Or (ThisItem.Status = "Aguardando Devolução"),
-                                    UpdateContext({ctxRetiradaChave: true}),
-                                    UpdateContext({ctxResultadoSolicitacao: true})
-                                )
-                            PaddingBottom: =10
-                            PaddingLeft: |
-                                =10
-                            PaddingRight: =10
-                            PaddingTop: =10
-                            Width: =54
-                            X: =108
-                            ZIndex: =4
+                            icn_ExcluirSolicitacao As icon.Edit:
+                                BorderColor: =Cor.Border
+                                Color: =Cor.Primary
+                                DisabledBorderColor: =Cor.Disabled
+                                DisabledColor: =Cor.Disabled
+                                FocusedBorderThickness: =0
+                                Height: =45
+                                HoverColor: =ColorFade(Self.Color, 10%)
+                                HoverFill: =Cor.TransparentLight
+                                Icon: =Icon.Trash
+                                LayoutMinWidth: =40
+                                OnSelect: |-
+                                    =Concurrent(
+                                        UpdateContext({ctxRegistroSelecionado: ThisItem}),
+                                        UpdateContext({ctxExcluirSolicitacao: true})
+                                    )
+                                PaddingBottom: =10
+                                PaddingLeft: |
+                                    =10
+                                PaddingRight: =10
+                                PaddingTop: =10
+                                Width: =54
+                                X: =162
+                                ZIndex: =3
 
     con_EnviarRelatorio As groupContainer.manualLayoutContainer:
         Fill: =RGBA(0, 0, 0, 0.48)
