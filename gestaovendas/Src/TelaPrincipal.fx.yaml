@@ -404,8 +404,9 @@ TelaPrincipal As screen:
                         true
                     );
                     Concurrent(
-                        Refresh(PerfisUsuarios),
-                        Refresh(Colaborador_MDiasBranco)
+                        Refresh(Credencial),
+                        Refresh(Clientes),
+                        Refresh(Vendedor)
                     );
                     Navigate(
                         TelaConfigurações,
