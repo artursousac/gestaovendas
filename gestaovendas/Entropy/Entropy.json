@@ -116,10 +116,11 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/20/2024 01:12:58",
+  "HeaderLastSavedDateTimeUTC": "08/20/2024 01:21:45",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "7d0bb00c-0459-438b-8eb1-bdee43a87f20": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-697cf919-1deb-48c4-8148-b5ab5f49a81b\""
+    "7d0bb00c-0459-438b-8eb1-bdee43a87f20": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-697cf919-1deb-48c4-8148-b5ab5f49a81b\"",
+    "7ec25f8d-d84b-45f2-b8e8-309b7071c880": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/ac01b17dd1484ad08148ffff42dd6cd0\""
   },
   "LocalDatabaseReferencesAsEmpty": true,
   "LocalResourceFileNames": {
@@ -303,17 +304,18 @@
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
-    "Clientes": 0,
-    "ComboBoxSample": 8,
-    "Credencial": 1,
-    "CustomGallerySample": 9,
-    "EnderecoCliente": 2,
-    "ImagensReferencia": 3,
-    "LotePedidos": 4,
-    "Pedidos": 5,
-    "RadioSample": 10,
-    "Referencias": 6,
-    "Vendedor": 7
+    "Clientes": 1,
+    "ComboBoxSample": 9,
+    "Credencial": 2,
+    "CustomGallerySample": 10,
+    "EnderecoCliente": 3,
+    "ImagensReferencia": 4,
+    "LotePedidos": 5,
+    "Pedidos": 6,
+    "RadioSample": 11,
+    "Referencias": 7,
+    "UsuáriosdoOffice365": 0,
+    "Vendedor": 8
   },
   "OrderGroupControls": {
     "Group5": {

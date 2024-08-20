@@ -239,14 +239,39 @@ TelaInicial As screen:
                 HoverBorderColor: =Self.HoverFill
                 HoverColor: =Self.Color
                 HoverFill: =ColorFade(Self.Fill, -10%)
-                OnSelect: |-
-                    =Set(varLoading, true);
+                OnSelect: |
+                    =Set(
+                        varLoading,
+                        true
+                    );
                     If(
                         LookUp(
                             Credencial,
                             inpt_Usuario_TelaInicial.Text = Login,
                             Senha
                         ) = inpt_Senha_TelaInicial.Text,
+                        Set(
+                            varUsuario,
+                            {
+                                Login: inpt_Usuario_TelaInicial.Text,
+                                Nome: LookUp(
+                                    Vendedor,
+                                    inpt_Usuario_TelaInicial.Text = CodigoVendedor,
+                                    Nome
+                                ),
+                                Email: UsuáriosdoOffice365.MyProfileV2().mail,
+                                Perfil: LookUp(
+                                    Credencial,
+                                    inpt_Usuario_TelaInicial.Text = Login,
+                                    Perfil
+                                ),
+                                Estado: LookUp(
+                                    Vendedor,
+                                    inpt_Usuario_TelaInicial.Text = CodigoVendedor,
+                                    Estado
+                                )
+                            }
+                        );
                         Navigate(
                             TelaPedidos,
                             ScreenTransition.Fade
@@ -259,7 +284,10 @@ TelaInicial As screen:
                             2000
                         )
                     );
-                    Set(varLoading, false);
+                    Set(
+                        varLoading,
+                        false
+                    );
                 PressedBorderColor: =Self.PressedFill
                 PressedColor: =Self.Color
                 PressedFill: =ColorFade(Self.Fill, -30%)

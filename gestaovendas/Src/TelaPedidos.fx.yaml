@@ -154,7 +154,7 @@ TelaPedidos As screen:
                     );
                     Set(varLoading, false);
                     Navigate(
-                        TelaGerenciamentoChaves,
+                        TelaClientes,
                         ScreenTransition.Fade
                     );
                     Reset(Gallery_ControlePedidos);
@@ -166,7 +166,6 @@ TelaPedidos As screen:
                 RadiusTopLeft: =10
                 RadiusTopRight: =10
                 TabIndex: =0
-                Visible: =varAdminUnidade Or varAdminGeral Or varSP
                 Width: =187.72
                 X: =225.15
                 ZIndex: =2
