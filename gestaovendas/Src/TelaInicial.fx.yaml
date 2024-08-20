@@ -254,11 +254,11 @@ TelaInicial As screen:
                             varUsuario,
                             {
                                 Login: inpt_Usuario_TelaInicial.Text,
-                                Nome: LookUp(
+                                Nome: Coalesce(LookUp(
                                     Vendedor,
                                     inpt_Usuario_TelaInicial.Text = CodigoVendedor,
                                     Nome
-                                ),
+                                ), User().FullName),
                                 Email: UsuáriosdoOffice365.MyProfileV2().mail,
                                 Perfil: LookUp(
                                     Credencial,

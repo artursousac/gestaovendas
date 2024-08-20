@@ -1630,8 +1630,7 @@ TelaPedidos As screen:
                         =Concurrent(
                             UpdateContext({ConteinerRelatorio: false}),
                             Reset(dte_DataFinal),
-                            Reset(dte_DataInicial),
-                            Reset(rd_FilterFilial_Relatorio)
+                            Reset(dte_DataInicial)
                         )
                     RadiusBottomLeft: =6
                     RadiusBottomRight: =6
@@ -1653,8 +1652,7 @@ TelaPedidos As screen:
                         =Concurrent(
                             UpdateContext({ConteinerRelatorio: false}),
                             Reset(dte_DataFinal),
-                            Reset(dte_DataInicial),
-                            Reset(rd_FilterFilial_Relatorio)
+                            Reset(dte_DataInicial)
                         )
                     TabIndex: =1
                     Width: =22
