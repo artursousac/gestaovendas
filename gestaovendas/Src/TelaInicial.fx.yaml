@@ -248,7 +248,7 @@ TelaInicial As screen:
                             Senha
                         ) = inpt_Senha_TelaInicial.Text,
                         Navigate(
-                            TelaPrincipal,
+                            TelaPedidos,
                             ScreenTransition.Fade
                         );
                         UpdateContext({ctxError: false}),

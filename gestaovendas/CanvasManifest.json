@@ -101,7 +101,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 86,
+    "BindingErrorCount": 79,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -136,7 +136,10 @@
   },
   "ScreenOrder": [
     "TelaInicial",
-    "TelaPrincipal",
-    "TelaConfigurações"
+    "TelaPedidos",
+    "TelaConfigurações",
+    "TelaClientes",
+    "TelaVendedores",
+    "TelaReferencias"
   ]
 }

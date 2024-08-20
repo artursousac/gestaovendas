@@ -1,4 +1,4 @@
-TelaPrincipal As screen:
+TelaPedidos As screen:
 
     ctn_VerticalFundo As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
@@ -149,8 +149,8 @@ TelaPrincipal As screen:
                         true
                     );
                     Concurrent(
-                        Refresh(Chaves),
-                        Refresh(AprovadoresChaves)
+                        Refresh(Pedidos),
+                        Refresh(LotePedidos)
                     );
                     Set(varLoading, false);
                     Navigate(
@@ -421,7 +421,6 @@ TelaPrincipal As screen:
                 RadiusTopLeft: =10
                 RadiusTopRight: =10
                 TabIndex: =0
-                Visible: =varAdminUnidade Or varAdminGeral Or varSP
                 Width: =187.72
                 X: =225.15
                 ZIndex: =4
