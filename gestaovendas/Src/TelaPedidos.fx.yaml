@@ -1192,26 +1192,7 @@ TelaPedidos As screen:
                     BorderStyle: =BorderStyle.None
                     DelayItemLoading: =true
                     Height: =100
-                    Items: |-
-                        =SortByColumns(
-                            Filter(
-                                LotePedidos,
-                                (cbb_FilterStatus.Selected.Value = "Todos" Or Status = cbb_FilterStatus.Selected.Value) && 
-                                (IsBlank(inpt_FilterSolicitacao.Text) Or ID = Value(inpt_FilterSolicitacao.Text)) && 
-                                (IsBlank(inpt_FilterColaborador.Text) Or StartsWith(
-                                    NomeRetirado,
-                                    inpt_FilterColaborador.Text
-                                )) && 
-                                (IsBlank(inpt_FilterChave.Text) Or CodChave = inpt_FilterChave.Text) && 
-                                (Criado >= date_FilterDataSolicitacaoInicial.SelectedDate && Criado <= DateAdd(
-                                    date_FilterDataSolicitacaoFinal.SelectedDate,
-                                    1
-                                )) && 
-                                (varAdminGeral Or (varSP && CodFilial = varUsuario.IDUnidade) Or (varAdminUnidade && CodFilial = varUsuario.IDUnidade) Or MatriculaSolicitante = varUsuario.Matrícula Or MatriculaRetirado = varUsuario.Matrícula Or MatriculaGestor = varUsuario.Matrícula)
-                            ),
-                            "ID",
-                            SortOrder.Descending
-                        )
+                    Items: =LotePedidos
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -1400,6 +1381,8 @@ TelaPedidos As screen:
                         RadiusTopLeft: =0
                         RadiusTopRight: =0
                         Width: =205
+                        X: =1111
+                        Y: =5
                         ZIndex: =7
 
                         icn_VisualizarSolicitacao As icon.Edit:
@@ -1443,7 +1426,6 @@ TelaPedidos As screen:
                             PaddingLeft: =10
                             PaddingRight: =10
                             PaddingTop: =10
-                            Visible: =((ThisItem.MatriculaSolicitante = varUsuario.Matrícula Or ThisItem.MatriculaRetirado = varUsuario.Matrícula) && ((ThisItem.Status = "Pendente Retirada" && ThisItem.ChaveRestrita = "Não") Or ThisItem.Status = "Pendente Responsável"))
                             Width: =54
                             X: =54
                             ZIndex: =2
@@ -1469,7 +1451,6 @@ TelaPedidos As screen:
                                 =10
                             PaddingRight: =10
                             PaddingTop: =10
-                            Visible: =((ThisItem.Status = "Pendente Retirada" && ThisItem.ChaveRestrita = "Não") Or ThisItem.Status = "Pendente Responsável") && (ThisItem.MatriculaSolicitante = varUsuario.Matrícula)
                             Width: =54
                             X: =162
                             ZIndex: =3
@@ -1498,7 +1479,6 @@ TelaPedidos As screen:
                                 =10
                             PaddingRight: =10
                             PaddingTop: =10
-                            Visible: =(ThisItem.Status = "Pendente Responsável" && LookUp(AprovadoresChaves, ThisItem.CodChave = CodChave && MatriculaAprovador = varUsuario.Matrícula, true)) Or (ThisItem.Status = "Pendente Retirada" && varSP) Or (ThisItem.Status = "Aguardando Devolução" && varSP)
                             Width: =54
                             X: =108
                             ZIndex: =4
