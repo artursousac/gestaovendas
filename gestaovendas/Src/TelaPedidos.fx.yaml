@@ -1085,8 +1085,8 @@ TelaPedidos As screen:
                         FontWeight: =FontWeight.Semibold
                         LayoutMinHeight: =0
                         Size: =12
-                        Text: ="N°"
-                        Width: =50
+                        Text: ="N° do Lote"
+                        Width: =100
                         ZIndex: =1
 
                     lbl_DataSolicitacao_CabecalhoControleChaves As label:
@@ -1246,7 +1246,7 @@ TelaPedidos As screen:
                             RadiusTopRight: =5
                             Size: =10
                             Text: =ThisItem.ID
-                            Width: =50
+                            Width: =100
                             ZIndex: =1
 
                         lbl_DataSolicitacao_GalleryControleChaves As label:
