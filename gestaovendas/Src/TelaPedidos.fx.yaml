@@ -1308,14 +1308,14 @@ TelaPedidos As screen:
                             Width: =200
                             ZIndex: =8
 
-                        btn_Experiência_ListaSugestões As button:
+                        btn_Status_Pedidos As button:
                             AlignInContainer: =AlignInContainer.Center
                             BorderColor: =RGBA(166, 166, 166, 1)
                             BorderThickness: =0
                             DisabledColor: =RGBA(255, 255, 255, 1)
                             DisabledFill: |-
                                 =If(
-                                    ThisItem.Status = "Em Aberto",
+                                    ThisItem.Status = "Pendente Análise",
                                     RGBA(
                                         255,
                                         162,
