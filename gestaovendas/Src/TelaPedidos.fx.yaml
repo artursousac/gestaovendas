@@ -3,7 +3,7 @@ TelaPedidos As screen:
     ctn_VerticalFundo As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.None
         Fill: =Cor.Transparent
-        Height: =Parent.Height-Self.Y*2
+        Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =10
         LayoutMode: =LayoutMode.Auto
@@ -11,9 +11,7 @@ TelaPedidos As screen:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Width: =1366
-        X: =40
-        Y: =40
+        Width: =Parent.Width
         ZIndex: =1
 
         ctn_Header_ControleChaves As groupContainer.horizontalAutoLayoutContainer:
@@ -1063,7 +1061,6 @@ TelaPedidos As screen:
                 ZIndex: =2
 
                 ctn_CabecalhoGallery As groupContainer.horizontalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.None
                     Fill: =Cor.Transparent
                     FillPortions: =0
@@ -1082,6 +1079,7 @@ TelaPedidos As screen:
                         BorderColor: =Cor.Border
                         Color: =Cor.TextStandard
                         DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
                         FontWeight: =FontWeight.Semibold
                         LayoutMinHeight: =0
                         Size: =12
@@ -1095,11 +1093,12 @@ TelaPedidos As screen:
                         BorderColor: =Cor.Border
                         Color: =Cor.TextStandard
                         DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
                         FontWeight: =FontWeight.Semibold
                         LayoutMinHeight: =0
                         Size: =12
-                        Text: ="Data da Solicitação"
-                        Width: =100
+                        Text: ="Data do Pedido"
+                        Width: =140
                         ZIndex: =2
 
                     lbl_Chave_CabecalhoControleChaves As label:
@@ -1107,6 +1106,7 @@ TelaPedidos As screen:
                         BorderColor: =Cor.Border
                         Color: =Cor.TextStandard
                         DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
                         FontWeight: =FontWeight.Semibold
                         LayoutMinHeight: =0
                         Size: =12
@@ -1119,6 +1119,7 @@ TelaPedidos As screen:
                         BorderColor: =Cor.Border
                         Color: =Cor.TextStandard
                         DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
                         FontWeight: =FontWeight.Semibold
                         LayoutMinHeight: =0
                         Size: =12
@@ -1131,6 +1132,7 @@ TelaPedidos As screen:
                         BorderColor: =Cor.Border
                         Color: =Cor.TextStandard
                         DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
                         FontWeight: =FontWeight.Semibold
                         LayoutMinHeight: =0
                         Size: =12
@@ -1142,6 +1144,7 @@ TelaPedidos As screen:
                         BorderColor: =Cor.Border
                         Color: =Cor.TextStandard
                         DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
                         FontWeight: =FontWeight.Semibold
                         LayoutMinHeight: =0
                         Size: =12
@@ -1154,6 +1157,7 @@ TelaPedidos As screen:
                         BorderColor: =Cor.Border
                         Color: =Cor.TextStandard
                         DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
                         FontWeight: =FontWeight.Semibold
                         LayoutMinHeight: =0
                         Size: =12
@@ -1166,6 +1170,7 @@ TelaPedidos As screen:
                         BorderColor: =Cor.Border
                         Color: =Cor.TextStandard
                         DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
                         FontWeight: =FontWeight.Semibold
                         LayoutMinHeight: =0
                         Size: =12
