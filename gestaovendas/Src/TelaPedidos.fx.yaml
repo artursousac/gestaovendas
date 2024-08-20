@@ -1,6 +1,7 @@
 TelaPedidos As screen:
 
     ctn_VerticalFundo As groupContainer.verticalAutoLayoutContainer:
+        BorderStyle: =BorderStyle.None
         DropShadow: =DropShadow.None
         Fill: =Cor.Transparent
         Height: =Parent.Height
@@ -563,6 +564,7 @@ TelaPedidos As screen:
                     ZIndex: =3
 
         ctn_GalleryControleChaves As groupContainer.verticalAutoLayoutContainer:
+            BorderStyle: =BorderStyle.None
             DropShadow: =DropShadow.Semibold
             Fill: =Cor.BackgroundScreen
             Height: =Parent.Height-Self.Y*2
@@ -571,10 +573,10 @@ TelaPedidos As screen:
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
             Width: =Parent.Width-Self.X*2
             ZIndex: =2
 
@@ -1053,6 +1055,7 @@ TelaPedidos As screen:
 
             ctn_ItemsControleChaves As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
                 Fill: =Cor.BackgroundStandard
                 Height: =155
                 LayoutDirection: =LayoutDirection.Vertical
@@ -1080,19 +1083,20 @@ TelaPedidos As screen:
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
-                    PaddingLeft: =10
+                    PaddingLeft: =25
                     PaddingRight: =20
                     Width: =Parent.Width-Self.X*2
                     ZIndex: =2
 
                     lbl_NSolicitacao_CabecalhoControleChaves As label:
                         Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Center
                         BorderColor: =Cor.Border
                         Color: =Cor.TextStandard
                         DisabledColor: =Cor.DisabledText
-                        FillPortions: =1
                         FontWeight: =FontWeight.Semibold
                         LayoutMinHeight: =0
+                        LayoutMinWidth: =75
                         Size: =12
                         Text: ="N° do Lote"
                         Width: =100
@@ -1220,7 +1224,7 @@ TelaPedidos As screen:
                     Width: =Parent.Width-Self.X*2
                     ZIndex: =3
 
-                    Container1 As groupContainer.manualLayoutContainer:
+                    ctn_Fundo_Pedidos As groupContainer.manualLayoutContainer:
                         Height: =60
                         Width: =1850
                         X: =10
@@ -1229,7 +1233,7 @@ TelaPedidos As screen:
 
                     ctn_ItemsGalleryControleChaves As groupContainer.horizontalAutoLayoutContainer:
                         Fill: =Cor.GallerySeparator
-                        Height: =Parent.TemplateHeight-5
+                        Height: =ctn_Fundo_Pedidos.Height
                         LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutGap: =10
                         LayoutMode: =LayoutMode.Auto
@@ -1239,7 +1243,9 @@ TelaPedidos As screen:
                         RadiusBottomRight: =5
                         RadiusTopLeft: =5
                         RadiusTopRight: =5
-                        Width: =1
+                        Width: =Parent.Width-20-ctn_Ações.Width-10
+                        X: =10
+                        Y: =ctn_Fundo_Pedidos.Y
                         ZIndex: =2
 
                         btn_FundoID As button:
@@ -1252,14 +1258,13 @@ TelaPedidos As screen:
                             DisabledFill: =Cor.DisabledButton
                             DisplayMode: =DisplayMode.View
                             Fill: =Cor.Primary
-                            FillPortions: =1
                             FocusedBorderThickness: =Metadados.EspessuraBordaBotao
                             Height: =30
                             HoverBorderColor: =Self.HoverFill
                             HoverColor: =Self.Color
                             HoverFill: =ColorFade(Self.Fill, -10%)
                             LayoutMinHeight: =0
-                            LayoutMinWidth: =0
+                            LayoutMinWidth: =75
                             PressedBorderColor: =Self.PressedFill
                             PressedColor: =Self.Color
                             PressedFill: =ColorFade(Self.Fill, -30%)
