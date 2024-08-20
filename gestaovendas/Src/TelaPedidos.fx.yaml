@@ -1498,15 +1498,15 @@ TelaPedidos As screen:
         con_GerarRelatorio As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Regular
             Fill: =Cor.BackgroundStandard
-            Height: =423
+            Height: =356
             RadiusBottomLeft: =15
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
             Visible: =ConteinerRelatorio
-            Width: =464
-            X: =451
-            Y: =188
+            Width: =Parent.Width*0.25
+            X: =(Parent.Width - Self.Width)/2
+            Y: =(Parent.Height - Self.Height)/2
             ZIndex: =1
 
             txt_Relatorio As label:
@@ -1559,7 +1559,7 @@ TelaPedidos As screen:
                     Text: ="Cancelar"
                     Width: =132
                     X: =69
-                    Y: =362
+                    Y: =249
                     ZIndex: =2
 
                 btn_EnviarRelatorio As button:
@@ -1600,7 +1600,7 @@ TelaPedidos As screen:
                     Text: ="Enviar Relatório"
                     Width: =171
                     X: =224
-                    Y: =362
+                    Y: =249
                     ZIndex: =3
 
             shp_LinhaSuperiorRelatorio As rectangle:
@@ -1667,71 +1667,8 @@ TelaPedidos As screen:
                 Height: =1
                 Width: =440
                 X: =12
-                Y: =346
+                Y: =233
                 ZIndex: =15
-
-            ctn_FilterFilial_Relatorio As groupContainer.verticalAutoLayoutContainer:
-                DropShadow: =DropShadow.None
-                Fill: =Cor.BackgroundStandard
-                Height: =119
-                LayoutAlignItems: =LayoutAlignItems.Stretch
-                LayoutDirection: =LayoutDirection.Vertical
-                LayoutMode: =LayoutMode.Auto
-                PaddingBottom: =1
-                PaddingLeft: =1
-                PaddingRight: =1
-                PaddingTop: =1
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Visible: =varAdminGeral
-                Width: =391
-                X: =35
-                Y: =208
-                ZIndex: =16
-
-                lbl_FilterFilial_Relatorio As label:
-                    BorderColor: =Cor.Border
-                    Color: =Cor.TextStandard
-                    DisabledColor: =Cor.DisabledText
-                    Height: =30
-                    Size: =12
-                    Text: ="Filial"
-                    Width: =200
-                    ZIndex: =1
-
-                rd_FilterFilial_Relatorio As radio:
-                    BorderColor: =Cor.Border
-                    Color: =Cor.TextStandard
-                    Default: ="Todas"
-                    FillPortions: =1
-                    FocusedBorderThickness: =0
-                    Height: =0
-                    HoverColor: =ColorFade(Self.Color, 25%)
-                    Items: |-
-                        =[{Unidade: "Todas", CodFilial: "Todas"}, {Unidade: "GMP", CodFilial: "17"}, {Unidade: "GMT", CodFilial: "36"}, {Unidade: "Moinho Dias Branco", CodFilial: "25"}]
-                    Layout: =Layout.Horizontal
-                    LayoutMinHeight: =80
-                    LayoutMinWidth: =0
-                    PaddingBottom: =0
-                    PaddingTop: =0
-                    RadioBackgroundFill: =Cor.BackgroundInput
-                    RadioBorderColor: |-
-                        =If(
-                            ctxValidacao && IsBlank(Self.Selected),
-                            RGBA(
-                                240,
-                                31,
-                                55,
-                                1
-                            ),
-                            Cor.Border
-                        )
-                    RadioSelectionFill: =Cor.Primary
-                    RadioSize: =30
-                    Size: =12
-                    ZIndex: =2
 
             Group5 As group:
                 Height: =5

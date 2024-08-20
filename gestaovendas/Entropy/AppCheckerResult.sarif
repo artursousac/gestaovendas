@@ -616,32 +616,32 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ctn_FilterFilial_Relatorio.Visible"
+                  "fullyQualifiedName": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.rtn_FecharRelatorio.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ctn_FilterFilial_Relatorio.Visible",
+                  "fullyQualifiedName": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.rtn_FecharRelatorio.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 13,
-                  "charOffset": 0,
+                  "charLength": 25,
+                  "charOffset": 128,
                   "snippet": {
-                    "text": "varAdminGeral"
+                    "text": "rd_FilterFilial_Relatorio"
                   }
                 }
               },
               "properties": {
-                "member": "Visible",
+                "member": "OnSelect",
                 "module": "TelaPedidos",
-                "type": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ctn_FilterFilial_Relatorio"
+                "type": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.rtn_FecharRelatorio"
               }
             }
           ],
           "message": {
             "arguments": [
-              "varAdminGeral"
+              "rd_FilterFilial_Relatorio"
             ],
             "id": "issue"
           },
@@ -656,32 +656,32 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ctn_FilterFilial_Relatorio.rd_FilterFilial_Relatorio.RadioBorderColor"
+                  "fullyQualifiedName": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ico_FecharRelatorio.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ctn_FilterFilial_Relatorio.rd_FilterFilial_Relatorio.RadioBorderColor",
+                  "fullyQualifiedName": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ico_FecharRelatorio.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 12,
-                  "charOffset": 9,
+                  "charLength": 25,
+                  "charOffset": 128,
                   "snippet": {
-                    "text": "ctxValidacao"
+                    "text": "rd_FilterFilial_Relatorio"
                   }
                 }
               },
               "properties": {
-                "member": "RadioBorderColor",
+                "member": "OnSelect",
                 "module": "TelaPedidos",
-                "type": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ctn_FilterFilial_Relatorio.rd_FilterFilial_Relatorio"
+                "type": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ico_FecharRelatorio"
               }
             }
           ],
           "message": {
             "arguments": [
-              "ctxValidacao"
+              "rd_FilterFilial_Relatorio"
             ],
             "id": "issue"
           },
@@ -1710,66 +1710,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ctn_FilterFilial_Relatorio.rd_FilterFilial_Relatorio.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ctn_FilterFilial_Relatorio.rd_FilterFilial_Relatorio.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TelaPedidos",
-                "type": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ctn_FilterFilial_Relatorio.rd_FilterFilial_Relatorio"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ctn_FilterFilial_Relatorio.rd_FilterFilial_Relatorio.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ctn_FilterFilial_Relatorio.rd_FilterFilial_Relatorio.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "TelaPedidos",
-                "type": "TelaPedidos.con_EnviarRelatorio.con_GerarRelatorio.ctn_FilterFilial_Relatorio.rd_FilterFilial_Relatorio"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 5
         },
         {
           "locations": [
