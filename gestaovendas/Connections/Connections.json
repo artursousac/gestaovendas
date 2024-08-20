@@ -8,55 +8,64 @@
     "datasets": {
       "https://8g18x8.sharepoint.com/sites/GerenciadordeVendas_cr67b_shared_sharepointonline_95a504a93e0c4eb99b8df33476ae990d": {
         "datasetOverride": {
-          "environmentVariableName": "cr67b_shared_sharepointonline_95a504a93e0c4eb99b8df33476ae990d"
+          "environmentVariableName": "cr67b_shared_sharepointonline_95a504a93e0c4eb99b8df33476ae990d",
+          "name": "https://8g18x8.sharepoint.com/sites/GerenciadordeVendas"
         },
         "dataSources": {
           "Clientes": {
             "tableName": "2123465a-aa54-4afe-b149-151e7394cff8",
             "tableNameOverride": {
-              "environmentVariableName": "cr67b_shared_sharepointonline_87085fc4cdb04686b8fd99e9599b3363"
+              "environmentVariableName": "cr67b_shared_sharepointonline_87085fc4cdb04686b8fd99e9599b3363",
+              "name": "2123465a-aa54-4afe-b149-151e7394cff8"
             }
           },
           "Credencial": {
             "tableName": "d500bd74-4da9-4b71-9c39-9d4f9c96b1d5",
             "tableNameOverride": {
-              "environmentVariableName": "cr67b_shared_sharepointonline_328b38d2c23a4d848743fae019ca5081"
+              "environmentVariableName": "cr67b_shared_sharepointonline_328b38d2c23a4d848743fae019ca5081",
+              "name": "d500bd74-4da9-4b71-9c39-9d4f9c96b1d5"
             }
           },
           "EnderecoCliente": {
             "tableName": "dc388b61-d7c7-4523-b93e-99b239abcb81",
             "tableNameOverride": {
-              "environmentVariableName": "cr67b_shared_sharepointonline_e05cc31f49e84af6a7a7dc9278396a20"
+              "environmentVariableName": "cr67b_shared_sharepointonline_e05cc31f49e84af6a7a7dc9278396a20",
+              "name": "dc388b61-d7c7-4523-b93e-99b239abcb81"
             }
           },
           "ImagensReferencia": {
             "tableName": "69fc0cfc-f158-4795-8d6f-cb8dffafaad0",
             "tableNameOverride": {
-              "environmentVariableName": "cr67b_shared_sharepointonline_c7d71f5e1e7c4040b99bc960fe6c2732"
+              "environmentVariableName": "cr67b_shared_sharepointonline_c7d71f5e1e7c4040b99bc960fe6c2732",
+              "name": "69fc0cfc-f158-4795-8d6f-cb8dffafaad0"
             }
           },
           "LotePedidos": {
             "tableName": "f0017f5a-699c-4983-ab06-18c0d2e700f1",
             "tableNameOverride": {
-              "environmentVariableName": "cr67b_shared_sharepointonline_73b66baa5a0443768b57a37fcaf689bb"
+              "environmentVariableName": "cr67b_shared_sharepointonline_73b66baa5a0443768b57a37fcaf689bb",
+              "name": "f0017f5a-699c-4983-ab06-18c0d2e700f1"
             }
           },
           "Pedidos": {
             "tableName": "cd2314f9-565d-4b65-82e8-c2c79612eb5a",
             "tableNameOverride": {
-              "environmentVariableName": "cr67b_shared_sharepointonline_ffe792f7612a4f7b8d2dafdadfd38135"
+              "environmentVariableName": "cr67b_shared_sharepointonline_ffe792f7612a4f7b8d2dafdadfd38135",
+              "name": "cd2314f9-565d-4b65-82e8-c2c79612eb5a"
             }
           },
           "Referencias": {
             "tableName": "5a52e7a1-a11c-42d3-8149-f25febd8b8e4",
             "tableNameOverride": {
-              "environmentVariableName": "cr67b_shared_sharepointonline_abacc39d662b4866811cb3ff215ae375"
+              "environmentVariableName": "cr67b_shared_sharepointonline_abacc39d662b4866811cb3ff215ae375",
+              "name": "5a52e7a1-a11c-42d3-8149-f25febd8b8e4"
             }
           },
           "Vendedor": {
             "tableName": "93459338-501d-4b3c-bd1b-533da2306c54",
             "tableNameOverride": {
-              "environmentVariableName": "cr67b_shared_sharepointonline_3aa4a899e2e146b5a8d4315a376769df"
+              "environmentVariableName": "cr67b_shared_sharepointonline_3aa4a899e2e146b5a8d4315a376769df",
+              "name": "93459338-501d-4b3c-bd1b-533da2306c54"
             }
           }
         }

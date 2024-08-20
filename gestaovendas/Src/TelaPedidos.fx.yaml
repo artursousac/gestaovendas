@@ -595,7 +595,7 @@ TelaPedidos As screen:
                 ZIndex: =1
 
                 ctn_FilterSolicitacao As groupContainer.verticalAutoLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
+                    AlignInContainer: =AlignInContainer.Start
                     DropShadow: =DropShadow.None
                     Fill: =Cor.BackgroundStandard
                     Height: =Parent.Height-Self.Y*2
@@ -653,6 +653,7 @@ TelaPedidos As screen:
                     Height: =Parent.Height-Self.Y*2
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =5
                     LayoutMinHeight: =0
                     LayoutMinWidth: =295
                     LayoutMode: =LayoutMode.Auto
@@ -674,7 +675,7 @@ TelaPedidos As screen:
                         BorderStyle: =BorderStyle.None
                         Color: =Cor.TextStandard
                         DisabledColor: =Cor.DisabledText
-                        Height: =30
+                        Height: =20
                         LayoutMinWidth: =270
                         Size: =10
                         Text: ="Intervalo de Data da Solicitação"
@@ -696,7 +697,7 @@ TelaPedidos As screen:
                         ZIndex: =4
 
                         date_FilterDataSolicitacaoInicial As datepicker:
-                            AlignInContainer: =AlignInContainer.Start
+                            AlignInContainer: =AlignInContainer.Center
                             BorderColor: =Cor.Border
                             BorderThickness: =1
                             CalendarHeaderFill: =Cor.Primary
@@ -718,7 +719,7 @@ TelaPedidos As screen:
                             ZIndex: =1
 
                         date_FilterDataSolicitacaoFinal As datepicker:
-                            AlignInContainer: =AlignInContainer.Start
+                            AlignInContainer: =AlignInContainer.Center
                             BorderColor: =Cor.Border
                             BorderThickness: =1
                             CalendarHeaderFill: =Cor.Primary
