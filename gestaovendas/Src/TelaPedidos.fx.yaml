@@ -1802,8 +1802,8 @@ TelaPedidos As screen:
 
         img_Loading_Pedidos As image:
             BorderColor: =App.Theme.Colors.Darker40
-            Height: =768
+            Height: =Parent.Height
             Image: ='product-loading'
-            Width: =1366
+            Width: =Parent.Width
             ZIndex: =1
 
