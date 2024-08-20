@@ -1235,6 +1235,7 @@ TelaPedidos As screen:
                             DisabledFill: =Cor.DisabledButton
                             DisplayMode: =DisplayMode.View
                             Fill: =Cor.Primary
+                            FillPortions: =1
                             FocusedBorderThickness: =Metadados.EspessuraBordaBotao
                             Height: =30
                             HoverBorderColor: =Self.HoverFill
@@ -1259,6 +1260,7 @@ TelaPedidos As screen:
                             BorderColor: =Cor.Border
                             Color: =Cor.TextStandard
                             DisabledColor: =Cor.DisabledText
+                            FillPortions: =1
                             Size: =10
                             Text: =Text(ThisItem.Criado, "dd/mm/yyyy")
                             Width: =100
@@ -1269,6 +1271,7 @@ TelaPedidos As screen:
                             BorderColor: =Cor.Border
                             Color: =Cor.TextStandard
                             DisabledColor: =Cor.DisabledText
+                            FillPortions: =1
                             Size: =10
                             Text: =ThisItem.CodChave
                             Width: =80
@@ -1279,6 +1282,7 @@ TelaPedidos As screen:
                             BorderColor: =Cor.Border
                             Color: =Cor.TextStandard
                             DisabledColor: =Cor.DisabledText
+                            FillPortions: =1
                             Size: =10
                             Text: =LookUp(Chaves, ThisItem.CodChave = CodChave, LocalAndar)
                             Width: =100
@@ -1289,6 +1293,7 @@ TelaPedidos As screen:
                             BorderColor: =Cor.Border
                             Color: =Cor.TextStandard
                             DisabledColor: =Cor.DisabledText
+                            FillPortions: =1
                             Size: =10
                             Text: =LookUp(Chaves, ThisItem.CodChave = CodChave, AreaSala)
                             ZIndex: =6
@@ -1298,6 +1303,7 @@ TelaPedidos As screen:
                             BorderColor: =Cor.Border
                             Color: =Cor.TextStandard
                             DisabledColor: =Cor.DisabledText
+                            FillPortions: =1
                             Size: =10
                             Text: =Proper(ThisItem.NomeSolicitante)
                             Width: =200
@@ -1308,6 +1314,7 @@ TelaPedidos As screen:
                             BorderColor: =Cor.Border
                             Color: =Cor.TextStandard
                             DisabledColor: =Cor.DisabledText
+                            FillPortions: =1
                             Size: =10
                             Text: =Proper(ThisItem.NomeRetirado)
                             Width: =200
@@ -1362,6 +1369,7 @@ TelaPedidos As screen:
                                 )
                             DisplayMode: =DisplayMode.Disabled
                             Fill: =
+                            FillPortions: =1
                             FontWeight: =FontWeight.Normal
                             HoverFill: =
                             RadiusBottomLeft: =6
@@ -1378,7 +1386,7 @@ TelaPedidos As screen:
                     ctn_Ações As groupContainer.horizontalAutoLayoutContainer:
                         BorderStyle: =BorderStyle.None
                         DropShadow: =DropShadow.None
-                        Height: =55
+                        Height: =60
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutMode: =LayoutMode.Auto
                         RadiusBottomLeft: =0
@@ -1386,8 +1394,7 @@ TelaPedidos As screen:
                         RadiusTopLeft: =0
                         RadiusTopRight: =0
                         Width: =205
-                        X: =1111
-                        Y: =5
+                        X: =1665
                         ZIndex: =7
 
                         icn_VisualizarSolicitacao As icon.Edit:
