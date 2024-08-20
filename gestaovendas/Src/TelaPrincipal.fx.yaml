@@ -1857,7 +1857,7 @@ TelaPrincipal As screen:
                     Y: =137
                     ZIndex: =10
 
-    ctn_Loading_Controle_1 As groupContainer.manualLayoutContainer:
+    ctn_Loading_Pedidos As groupContainer.manualLayoutContainer:
         Fill: =If(varDark, RGBA(204, 204, 204, 0.4), RGBA(204, 204, 204, 0.8))
         Height: =768
         Visible: =varLoading
@@ -1866,7 +1866,7 @@ TelaPrincipal As screen:
         Y: =40
         ZIndex: =3
 
-        img_Loading_Controle_1 As image:
+        img_Loading_Pedidos As image:
             BorderColor: =App.Theme.Colors.Darker40
             Height: =768
             Image: ='product-loading'

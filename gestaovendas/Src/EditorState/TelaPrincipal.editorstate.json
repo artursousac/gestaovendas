@@ -9726,7 +9726,7 @@
       "StyleName": "defaultGroupContainerStyle",
       "Type": "ControlInfo"
     },
-    "ctn_Loading_Controle_1": {
+    "ctn_Loading_Pedidos": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "BorderColor",
@@ -9776,7 +9776,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "ctn_Loading_Controle_1",
+      "Name": "ctn_Loading_Pedidos",
       "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
@@ -14266,7 +14266,7 @@
       "StyleName": "defaultImageStyle",
       "Type": "ControlInfo"
     },
-    "img_Loading_Controle_1": {
+    "img_Loading_Pedidos": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -14337,7 +14337,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "img_Loading_Controle_1",
+      "Name": "img_Loading_Pedidos",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -14449,12 +14449,7 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "HoverBorderColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "FocusedBorderColor",
+          "PropertyName": "HoverFill",
           "RuleProviderType": "Unknown"
         },
         {
@@ -14464,7 +14459,12 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "HoverFill",
+          "PropertyName": "FocusedBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "HoverBorderColor",
           "RuleProviderType": "Unknown"
         },
         {
