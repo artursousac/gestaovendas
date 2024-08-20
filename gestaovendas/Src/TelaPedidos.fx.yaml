@@ -31,6 +31,7 @@ TelaPedidos As screen:
 
             img_MDiasBranco As image:
                 AlignInContainer: =AlignInContainer.Start
+                FillPortions: =1
                 Height: =Parent.Height
                 Image: =LogoMDiasBranco
                 Width: =120
@@ -43,6 +44,7 @@ TelaPedidos As screen:
                 DisabledBorderColor: =Cor.Disabled
                 DisabledFill: =Cor.Disabled
                 Fill: =Parent.Fill
+                FillPortions: =1
                 FocusedBorderThickness: =0
                 Height: =50
                 HoverBorderColor: |
@@ -175,6 +177,7 @@ TelaPedidos As screen:
                 DisabledBorderColor: =Cor.Disabled
                 DisabledFill: =Cor.Disabled
                 Fill: =Parent.Fill
+                FillPortions: =1
                 FocusedBorderThickness: =0
                 Height: =50
                 HoverBorderColor: |
@@ -297,6 +300,7 @@ TelaPedidos As screen:
                 DisabledBorderColor: =Cor.Disabled
                 DisabledFill: =Cor.Disabled
                 Fill: =Parent.Fill
+                FillPortions: =1
                 FocusedBorderThickness: =0
                 Height: =50
                 HoverBorderColor: |
@@ -424,11 +428,10 @@ TelaPedidos As screen:
 
             ctn_User As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.None
-                FillPortions: =0
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutJustifyContent: =LayoutJustifyContent.End
                 LayoutMinHeight: =Parent.Height
-                LayoutMinWidth: =250
+                LayoutMinWidth: =400
                 LayoutMode: =LayoutMode.Auto
                 Width: =350
                 ZIndex: =5
@@ -458,10 +461,12 @@ TelaPedidos As screen:
                 DropShadow: =DropShadow.None
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutGap: =10
-                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutJustifyContent: =LayoutJustifyContent.End
                 LayoutMinHeight: =Parent.Height
-                LayoutMinWidth: =Parent.Width - Self.X
+                LayoutMinWidth: =200
                 LayoutMode: =LayoutMode.Auto
+                PaddingRight: =50
+                Width: =200
                 ZIndex: =7
 
                 img_Sun As image:
@@ -666,6 +671,7 @@ TelaPedidos As screen:
                     lbl_FilterDataSolicitacao As label:
                         Align: =Align.Center
                         BorderColor: =Cor.Border
+                        BorderStyle: =BorderStyle.None
                         Color: =Cor.TextStandard
                         DisabledColor: =Cor.DisabledText
                         Height: =30
@@ -680,15 +686,17 @@ TelaPedidos As screen:
                         BorderStyle: =BorderStyle.None
                         DropShadow: =DropShadow.None
                         LayoutGap: =10
-                        LayoutMinHeight: =40
+                        LayoutMinHeight: =50
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =5
                         PaddingLeft: =10
                         PaddingRight: =10
                         Width: =Parent.Width
                         ZIndex: =4
 
                         date_FilterDataSolicitacaoInicial As datepicker:
+                            AlignInContainer: =AlignInContainer.Start
                             BorderColor: =Cor.Border
                             BorderThickness: =1
                             CalendarHeaderFill: =Cor.Primary
@@ -710,6 +718,7 @@ TelaPedidos As screen:
                             ZIndex: =1
 
                         date_FilterDataSolicitacaoFinal As datepicker:
+                            AlignInContainer: =AlignInContainer.Start
                             BorderColor: =Cor.Border
                             BorderThickness: =1
                             CalendarHeaderFill: =Cor.Primary
@@ -761,6 +770,7 @@ TelaPedidos As screen:
                         ZIndex: =1
 
                     inpt_FilterChave As text:
+                        AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =Cor.Border
                         BorderThickness: =1
                         Clear: =true
