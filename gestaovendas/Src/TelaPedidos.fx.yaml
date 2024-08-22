@@ -34,7 +34,7 @@ TelaPedidos As screen:
                 AlignInContainer: =AlignInContainer.Start
                 FillPortions: =1
                 Height: =Parent.Height
-                Image: =LogoMDiasBranco
+                Image: =GestaoVendas
                 Width: =120
                 ZIndex: =1
 
