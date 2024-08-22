@@ -14,46 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.lbl_Chave_GalleryControleChaves.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.lbl_Chave_GalleryControleChaves.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 9,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".CodChave"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "TelaPedidos",
-                "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.lbl_Chave_GalleryControleChaves"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "CodChave"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.lbl_Local_GalleryControleChaves.Text"
                 }
               ],

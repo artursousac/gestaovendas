@@ -1296,7 +1296,7 @@ TelaPedidos As screen:
                             DisabledColor: =Cor.DisabledText
                             FillPortions: =1
                             Size: =10
-                            Text: =ThisItem.CodChave
+                            Text: =LookUp(Clientes, Value(ThisItem.IDCliente) = ID, Nome)
                             Width: =80
                             ZIndex: =4
 
