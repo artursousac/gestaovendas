@@ -39,9 +39,11 @@
       "NotaFiscal": "NotaFiscal",
       "OData__ColorTag": "Pressione Delete para excluir o ícone.",
       "ParecerAnalista": "ParecerAnalista",
+      "Quantidade": "Quantidade",
       "Status": "Status",
       "StatusAnalista": "StatusAnalista",
-      "Title": "Título"
+      "Title": "Título",
+      "ValorTotal": "ValorTotal"
     },
     "DatasetName": "https://8g18x8.sharepoint.com/sites/GerenciadordeVendas",
     "EncodeDataset": true,

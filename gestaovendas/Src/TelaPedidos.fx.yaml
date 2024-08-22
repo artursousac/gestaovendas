@@ -1307,7 +1307,7 @@ TelaPedidos As screen:
                             DisabledColor: =Cor.DisabledText
                             FillPortions: =1
                             Size: =10
-                            Text: =LookUp(Chaves, ThisItem.CodChave = CodChave, LocalAndar)
+                            Text: =LookUp(EnderecoCliente, ThisItem.IDCliente = IDCliente, Cidade)
                             Width: =100
                             ZIndex: =5
 
@@ -1318,7 +1318,7 @@ TelaPedidos As screen:
                             DisabledColor: =Cor.DisabledText
                             FillPortions: =1
                             Size: =10
-                            Text: =LookUp(Chaves, ThisItem.CodChave = CodChave, AreaSala)
+                            Text: =ThisItem.ValorTotal
                             ZIndex: =6
 
                         lbl_Solicitante_GalleryControleChaves As label:
@@ -1328,7 +1328,7 @@ TelaPedidos As screen:
                             DisabledColor: =Cor.DisabledText
                             FillPortions: =1
                             Size: =10
-                            Text: =Proper(ThisItem.NomeSolicitante)
+                            Text: =ThisItem.Quantidade
                             Width: =200
                             ZIndex: =7
 
@@ -1339,7 +1339,7 @@ TelaPedidos As screen:
                             DisabledColor: =Cor.DisabledText
                             FillPortions: =1
                             Size: =10
-                            Text: =Proper(ThisItem.NomeRetirado)
+                            Text: =ThisItem.DataFaturamento
                             Width: =200
                             ZIndex: =8
 
@@ -1394,6 +1394,7 @@ TelaPedidos As screen:
                             Fill: =
                             FontWeight: =FontWeight.Normal
                             HoverFill: =
+                            OnSelect: =
                             RadiusBottomLeft: =6
                             RadiusBottomRight: =6
                             RadiusTopLeft: =6
