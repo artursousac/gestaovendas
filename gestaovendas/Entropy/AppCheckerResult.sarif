@@ -1176,197 +1176,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao.FocusedBorderThickness"
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_EditarSolicitacao.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "TelaPedidos",
-                "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "TelaPedidos",
-                "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao.AccessibleLabel",
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_EditarSolicitacao.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "TelaPedidos",
-                "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "TelaPedidos",
-                "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "TelaPedidos",
-                "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TelaPedidos",
-                "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_EditarSolicitacao.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_EditarSolicitacao.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
                 "module": "TelaPedidos",
                 "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_EditarSolicitacao"
               }
@@ -1378,8 +1198,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 6
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1416,17 +1236,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_EditarSolicitacao.AccessibleLabel"
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_EditarSolicitacao.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_EditarSolicitacao.AccessibleLabel",
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_EditarSolicitacao.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "FocusedBorderThickness",
                 "module": "TelaPedidos",
                 "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_EditarSolicitacao"
               }
@@ -1438,8 +1258,188 @@
           "properties": {
             "level": "Medium"
           },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TelaPedidos",
+                "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "TelaPedidos",
+                "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "TelaPedidos",
+                "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_ExcluirSolicitacao"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TelaPedidos",
+                "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "TelaPedidos",
+                "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "TelaPedidos",
+                "type": "TelaPedidos.ctn_VerticalFundo.ctn_GalleryControleChaves.ctn_ItemsControleChaves.Gallery_ControlePedidos.ctn_ItemsGalleryControleChaves.ctn_Ações.icn_VisualizarSolicitacao"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 6
         },
         {
           "locations": [
