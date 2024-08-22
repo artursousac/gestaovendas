@@ -1392,7 +1392,6 @@ TelaPedidos As screen:
                                 )
                             DisplayMode: =DisplayMode.Disabled
                             Fill: =
-                            FillPortions: =1
                             FontWeight: =FontWeight.Normal
                             HoverFill: =
                             RadiusBottomLeft: =6
