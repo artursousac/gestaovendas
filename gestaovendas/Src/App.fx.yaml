@@ -230,6 +230,7 @@ App As appinfo:
         );
         
         Set(varLink, "https://apps.powerapps.com/play/e/12bbf2f2-9de8-ea44-b61b-db6fa2e363e8/a/970108f3-2ce5-478d-8d44-5b6dab238bdb?tenantId=3193ae16-de74-40b9-a344-cb15c88eef1a&hint=ad5959ca-a838-4081-8293-32e19ce177be&sourcetime=1724105675208");
+    StartScreen: =TelaTeste
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
