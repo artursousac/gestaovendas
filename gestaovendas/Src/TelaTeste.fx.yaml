@@ -331,7 +331,7 @@ TelaTeste As screen:
                     HoverColor: =Self.Color
                     HoverFill: =ColorFade(Self.Fill, -10%)
                     OnSelect: |-
-                        =Launch($"https://webhooks.workato.com/webhooks/rest/412f5ae7-a14f-4569-b523-7abba0a475cc/chamadapowerapps?nome={inpt_Usuario_TelaInicial_2.Text}&email={inpt_Usuario_TelaInicial_1.Text}&senha={inpt_Senha_TelaInicial_1.Text}")
+                        =Launch($"https://webhooks.workato.com/webhooks/rest/412f5ae7-a14f-4569-b523-7abba0a475cc/chamadaapipython?nome={inpt_Usuario_TelaInicial_2.Text}&email={inpt_Usuario_TelaInicial_1.Text}&senha={inpt_Senha_TelaInicial_1.Text}&tipo=CriarUsuario")
                     PressedBorderColor: =Self.PressedFill
                     PressedColor: =Self.Color
                     PressedFill: =ColorFade(Self.Fill, -30%)
