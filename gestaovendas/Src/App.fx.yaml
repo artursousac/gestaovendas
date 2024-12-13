@@ -1,0 +1,242 @@
+App As appinfo:
+    BackEnabled: =true
+    Formulas: |
+        =
+        CoresLight=
+            {
+                    
+                BackgroundInput: ColorValue("#FFFFFF"),
+                BackgroundInputHover: ColorValue("#E7E7E8"),
+                BackgroundScreen: ColorValue("#EBEAEA"),
+                BackgroundStandard: ColorValue("#FFFFFF"),
+                BackgroundTop: ColorValue("#060808"),
+                Border: ColorValue("#C2C1C1"),
+                Cancel: ColorValue("#ADADAC"),
+                Custom1: ColorValue("#FFFFFF"),
+                Custom2: ColorValue("#FFFFFF"),
+                Custom3: ColorValue("#FFFFFF"),
+                Delete: ColorValue("#F1416C"),
+                Disabled: ColorValue("#EBEAEA"),
+                DisabledButton: ColorValue("#EBEAEA"),
+                DisabledText: ColorValue("#ADADAC"),
+                GallerySeparator: ColorValue("#EBEAEA"),
+                Neutral: ColorValue("#323130"),
+                NeutralD30: ColorValue("#232222"),
+                NeutralD60: ColorValue("#141413"),
+                NeutralD90: ColorValue("#050505"),
+                NeutralL30: ColorValue("#706F6E"),
+                NeutralL60: ColorValue("#ADADAC"),
+                NeutralL70: ColorValue("#C2C1C1"),
+                NeutralL90: ColorValue("#EBEAEA"),
+                NeutralL95: ColorValue("#F5F5F5"),
+                Primary: ColorValue("#0F1315"),
+                PrimaryD30: ColorValue("#0B0D0F"),
+                PrimaryD60: ColorValue("#060808"),
+                PrimaryD80: ColorValue("#030404"),
+                PrimaryD90: ColorValue("#020202"),
+                PrimaryL30: ColorValue("#575A5B"),
+                PrimaryL60: ColorValue("#9FA1A1"),
+                PrimaryL90: ColorValue("#E7E7E8"),
+                Secondary: ColorValue("#7C4DFF"),
+                Success: ColorValue("#40A73F"),
+                TextInverted: ColorValue("#ffffff"),
+                TextStandard: ColorValue("#323130"),
+                TransparentBlack: ColorValue("#000000DF"),
+                Transparent: ColorValue("#00000000"),
+                TransparentLight: ColorValue("#EBEAEA33"),
+                TransparentPrimaryDark: ColorValue("#030404E6"),
+                TransparentPrimaryLight: ColorValue("#575A5B1A"),
+                TransparentPrimaryMed: ColorValue("#575A5BB3"),
+                TransparentWhite: ColorValue("#FFFFFFDF"),
+                Warning: ColorValue("#F9C000"),
+                White: ColorValue("#FFFFFF")
+            };
+        
+        CoresDark=
+            {
+                BackgroundInput: ColorValue("#2E3036"),
+                BackgroundInputHover: ColorValue("#33353A"),
+                BackgroundScreen: ColorValue("#131518"),
+                BackgroundStandard: ColorValue("#212329"),
+                BackgroundTop: ColorValue("#212329"),
+                Border: ColorValue("#2E3036"),
+                Cancel: ColorValue("#2E3036"),
+                Custom1: ColorValue("#FFFFFF"),
+                Custom2: ColorValue("#FFFFFF"),
+                Custom3: ColorValue("#FFFFFF"),
+                Delete: ColorValue("#F1416C"),
+                Disabled: ColorValue("#595A5F"),
+                DisabledButton: ColorValue("#00000000"),
+                DisabledText: ColorValue("#A6A7A9"),
+                GallerySeparator: ColorValue("#2E3036"),
+                Neutral: ColorValue("#D7D7D8"),
+                NeutralD30: ColorValue("#E9E9EA"),
+                NeutralD60: ColorValue("#F4F4F4"),
+                NeutralD90: ColorValue("#FFFFFF"),
+                NeutralL30: ColorValue("#646569"),
+                NeutralL60: ColorValue("#4D4F54"),
+                NeutralL70: ColorValue("#424449"),
+                NeutralL90: ColorValue("#37393E"),
+                NeutralL95: ColorValue("#2E3036"),
+                Primary: ColorValue("#348FFD"),
+                PrimaryD30: ColorValue("#2464B1"),
+                PrimaryD60: ColorValue("#212329"),
+                PrimaryD80: ColorValue("#212329"),
+                PrimaryD90: ColorValue("#212329"),
+                PrimaryL30: ColorValue("#71B1FE"),
+                PrimaryL60: ColorValue("#494B50"),
+                PrimaryL90: ColorValue("#33353A"),
+                Secondary: ColorValue("#7C4DFF"),
+                Success: ColorValue("#40A73F"),
+                TextInverted: ColorValue("#FFFFFF"),
+                TextStandard: ColorValue("#D7D7D8"),
+                TransparentBlack: ColorValue("#000000DF"),
+                Transparent: ColorValue("#00000000"),
+                TransparentLight: ColorValue("#37393E33"),
+                TransparentPrimaryDark: ColorValue("#37393E33"),
+                TransparentPrimaryLight: ColorValue("#37393E33"),
+                TransparentPrimaryMed: ColorValue("#37393E33"),
+                TransparentWhite: ColorValue("#000000DF"),
+                Warning: ColorValue("#F9C000"),
+                White: ColorValue("#FFFFFF")
+            };
+        
+        TextCoresLight=
+            {
+                BackgroundInput: "#FFFFFF",
+                BackgroundInputHover: "#E7E7E8",
+                BackgroundScreen: "#EBEAEA",
+                BackgroundStandard: "#FFFFFF",
+                BackgroundTop: "#060808",
+                Border: "#C2C1C1",
+                Cancel: "#ADADAC",
+                Custom1: "#FFFFFF",
+                Custom2: "#FFFFFF",
+                Custom3: "#FFFFFF",
+                Delete: "#F1416C",
+                Disabled: "#EBEAEA",
+                DisabledButton: "#EBEAEA",
+                DisabledText: "#ADADAC",
+                GallerySeparator: "#EBEAEA",
+                Neutral: "#323130",
+                NeutralD30: "#232222",
+                NeutralD60: "#141413",
+                NeutralD90: "#050505",
+                NeutralL30: "#706F6E",
+                NeutralL60: "#ADADAC",
+                NeutralL70: "#C2C1C1",
+                NeutralL90: "#EBEAEA",
+                NeutralL95: "#F5F5F5",
+                Primary: "#0F1315",
+                PrimaryD30: "#0B0D0F",
+                PrimaryD60: "#060808",
+                PrimaryD80: "#030404",
+                PrimaryD90: "#020202",
+                PrimaryL30: "#575A5B",
+                PrimaryL60: "#9FA1A1",
+                PrimaryL90: "#E7E7E8",
+                Secondary: "#7C4DFF",
+                Success: "#40A73F",
+                TextInverted: "#FFFFFF",
+                TextStandard: "#323130",
+                TransparentBlack: "#000000DF",
+                Transparent: "#00000000",
+                TransparentLight: "#EBEAEA33",
+                TransparentPrimaryDark: "#030404E6",
+                TransparentPrimaryLight: "#575A5B1A",
+                TransparentPrimaryMed: "#575A5BB3",
+                TransparentWhite: "#FFFFFFDF",
+                Warning: "#F9C000",
+                White: "#FFFFFF"
+        
+            };
+        
+        TextCoresDark=
+            {
+                BackgroundInput: "#2E3036",
+                BackgroundInputHover: "#33353A",
+                BackgroundScreen: "#131518",
+                BackgroundStandard: "#212329",
+                BackgroundTop: "#212329",
+                Border: "#2E3036",
+                Cancel: "#2E3036",
+                Custom1: "#FFFFFF",
+                Custom2: "#FFFFFF",
+                Custom3: "#FFFFFF",
+                Delete: "#F1416C",
+                Disabled: "#595A5F",
+                DisabledButton: "#00000000",
+                DisabledText: "#A6A7A9",
+                GallerySeparator: "#2E3036",
+                Neutral: "#D7D7D8",
+                NeutralD30: "#E9E9EA",
+                NeutralD60: "#F4F4F4",
+                NeutralD90: "#FFFFFF",
+                NeutralL30: "#646569",
+                NeutralL60: "#4D4F54",
+                NeutralL70: "#424449",
+                NeutralL90: "#37393E",
+                NeutralL95: "#2E3036",
+                Primary: "#348FFD",
+                PrimaryD30: "#2464B1",
+                PrimaryD60: "#212329",
+                PrimaryD80: "#212329",
+                PrimaryD90: "#212329",
+                PrimaryL30: "#71B1FE",
+                PrimaryL60: "#494B50",
+                PrimaryL90: "#33353A",
+                Secondary: "#7C4DFF",
+                Success: "#40A73F",
+                TextInverted: "#FFFFFF",
+                TextStandard: "#D7D7D8",
+                TransparentBlack: "#000000DF",
+                Transparent: "#00000000",
+                TransparentLight: "#37393E33",
+                TransparentPrimaryDark: "#37393E33",
+                TransparentPrimaryLight: "#37393E33",
+                TransparentPrimaryMed: "#37393E33",
+                TransparentWhite: "#000000DF",
+                Warning: "#F9C000",
+                White: "#FFFFFF"
+            };
+        
+        Metadados=
+            {
+                EspessuraBordaBotao: "1"
+            };
+    OnStart: |-
+        =Set(
+            varDark,
+            false
+        );
+        If(
+            varDark,
+            Set(
+                Cor,
+                CoresDark
+            ),
+            Set(
+                TCor,
+                TextCoresDark
+            ),
+            Set(
+                Cor,
+                CoresLight
+            ),
+            Set(
+                TCor,
+                TextCoresLight
+            )
+        );
+        
+        Set(varLink, "https://apps.powerapps.com/play/e/12bbf2f2-9de8-ea44-b61b-db6fa2e363e8/a/970108f3-2ce5-478d-8d44-5b6dab238bdb?tenantId=3193ae16-de74-40b9-a344-cb15c88eef1a&hint=ad5959ca-a838-4081-8293-32e19ce177be&sourcetime=1724105675208");
+    StartScreen: =TelaTeste
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

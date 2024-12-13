@@ -1,0 +1,1799 @@
+TelaPedidos As screen:
+
+    ctn_VerticalFundo As groupContainer.verticalAutoLayoutContainer:
+        BorderStyle: =BorderStyle.None
+        DropShadow: =DropShadow.None
+        Fill: =Cor.Transparent
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =10
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =Parent.Width
+        ZIndex: =1
+
+        ctn_Header_ControleChaves As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Semibold
+            Fill: =Cor.BackgroundTop
+            FillPortions: =0
+            Height: =80
+            LayoutGap: =30
+            LayoutMinHeight: =60
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =1
+
+            img_MDiasBranco As image:
+                AlignInContainer: =AlignInContainer.Start
+                FillPortions: =1
+                Height: =Parent.Height
+                Image: =GestaoVendas
+                Width: =120
+                ZIndex: =1
+
+            btn_GerenciarChaves As image:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: |
+                    =ColorFade(Cor.Primary,0.15)
+                DisabledBorderColor: =Cor.Disabled
+                DisabledFill: =Cor.Disabled
+                Fill: =Parent.Fill
+                FillPortions: =1
+                FocusedBorderThickness: =0
+                Height: =50
+                HoverBorderColor: |
+                    =ColorFade(Cor.Primary,0.15)
+                Image: |
+                    =With({
+                        IconSVG:
+                        "
+                        <path d='M256,48C141.31,48,48,141.31,48,256s93.31,208,208,208,208-93.31,208-208S370.69,48,256,48Zm80,224H272v64a16,16,0,0,1-32,0V272H176a16,16,0,0,1,0-32h64V176a16,16,0,0,1,32,0v64h64a16,16,0,0,1,0,32Z'/></svg>
+                        "
+                        ,
+                        IconText:"Clientes",
+                        IconColor: TCor.TextInverted,
+                        TextColor:TCor.TextInverted,
+                        TextSize:16,
+                        TextCenter:true,
+                        PaddingText:0,
+                        PaddingIcon:18,
+                        varLoading:false, //If you want that the icon stay loading in some situation, just put a boolean variable
+                        TextLoading:"Loading",
+                        FontFamily:"Arial" //Tahoma, Verdana, Impact..
+                    },
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    //Não altere baixo
+                    //Do not change below
+                    With({
+                        PosicaoIcone:If(IsBlank(IconText),0,Round(Self.Width/2*-1 + Self.Height/2, 0)),
+                        TextX:
+                            If(TextCenter,
+                                "transform='translate(" &Round(Self.Height/2/2,0)+PaddingText & ", 0)' x='50%' text-anchor='middle'"
+                                ,
+                                "x='"&Self.Height + PaddingText&"'"
+                            ),
+                        TerminoSVG:"</g></svg>"
+                        },
+                    
+                        With({
+                            
+                        SVG_Loading:$"<svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 200 200' style='fill:{IconColor}' x='{PosicaoIcone}'><radialGradient id='a11' cx='.66' fx='.66' cy='.3125' fy='.3125' gradientTransform='scale(1.5)'><stop offset='0' stop-color='{IconColor}'></stop><stop offset='.3' stop-color='{IconColor}' stop-opacity='.9'></stop><stop offset='.6' stop-color='{IconColor}' stop-opacity='.6'></stop><stop offset='.8' stop-color='{IconColor}' stop-opacity='.3'></stop><stop offset='1' stop-color='{IconColor}' stop-opacity='0'></stop></radialGradient><circle transform-origin='center' fill='none' stroke='url(#a11)' stroke-width='15' stroke-linecap='round' stroke-dasharray='200 1000' stroke-dashoffset='0' cx='100' cy='100' r='70'><animateTransform type='rotate' attributeName='transform' calcMode='spline' dur='2' values='360;0' keyTimes='0;1' keySplines='0 0 1 1' repeatCount='indefinite'></animateTransform></circle><circle transform-origin='center' fill='none' opacity='.2' stroke='{IconColor}' stroke-width='15' stroke-linecap='round' cx='100' cy='100' r='70'></circle></svg>",
+                    
+                        InicioGrupoSvg:
+                            $"
+                            <svg xmlns='http://www.w3.org/2000/svg' width='0'>
+                            <g transform='translate(0,0)'>
+                                <text {TextX} y='50%' font-family='{FontFamily}' font-size='{TextSize}' fill='{TextColor}' alignment-baseline='middle' dy='0.10em'>{If(Self.Width>Self.Height,If(varLoading,TextLoading,IconText))}</text>",
+                            
+                        SVG_Ionic: $"<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 512 512' style='fill:{IconColor}' x='{PosicaoIcone}'>" & IconSVG
+                        
+                        }
+                    ,
+                    
+                    "data:image/svg+xml;utf8, " &  EncodeUrl(InicioGrupoSvg & Substitute(If(varLoading || IsBlank(IconSVG),SVG_Loading, SVG_Ionic),"#000",IconColor) & TerminoSVG)
+                    )
+                    )
+                    )
+                    
+                    /*
+                    "
+                    >
+                    Este ícone foi desenvolvido por Daniel Petrin (Mundo Power)
+                    
+                    www.mundopower.com.br
+                    
+                    > Em relação ao licenciamento dos ícones:
+                    
+                    The MIT License (MIT)
+                    
+                    Copyright (c) 2015-present Ionic (http://ionic.io/)
+                    
+                    Permission is hereby granted, free of charge, to any person obtaining a copy
+                    of this software and associated documentation files (the 'Software'), to deal
+                    in the Software without restriction, including without limitation the rights
+                    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                    copies of the Software, and to permit persons to whom the Software is
+                    furnished to do so, subject to the following conditions:
+                    
+                    "
+                    */
+                OnSelect: |
+                    =Set(
+                        varLoading,
+                        true
+                    );
+                    Concurrent(
+                        Refresh(Pedidos),
+                        Refresh(LotePedidos)
+                    );
+                    Set(varLoading, false);
+                    Navigate(
+                        TelaClientes,
+                        ScreenTransition.Fade
+                    );
+                    Reset(Gallery_ControlePedidos);
+                PaddingBottom: =10
+                PaddingTop: =12.52
+                PressedBorderColor: =ColorFade(Cor.Primary,0.35)
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                TabIndex: =0
+                Width: =187.72
+                X: =225.15
+                ZIndex: =2
+
+            btn_SolicitarChave As image:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: |
+                    =ColorFade(Cor.Primary,0.15)
+                DisabledBorderColor: =Cor.Disabled
+                DisabledFill: =Cor.Disabled
+                Fill: =Parent.Fill
+                FillPortions: =1
+                FocusedBorderThickness: =0
+                Height: =50
+                HoverBorderColor: |
+                    =ColorFade(Cor.Primary,0.15)
+                Image: |
+                    =With({
+                        IconSVG:
+                        "
+                        <path d='M256,48C141.31,48,48,141.31,48,256s93.31,208,208,208,208-93.31,208-208S370.69,48,256,48Zm80,224H272v64a16,16,0,0,1-32,0V272H176a16,16,0,0,1,0-32h64V176a16,16,0,0,1,32,0v64h64a16,16,0,0,1,0,32Z'/></svg>
+                        "
+                        ,
+                        IconText:"Novo Pedido",
+                        IconColor: TCor.TextInverted,
+                        TextColor:TCor.TextInverted,
+                        TextSize:16,
+                        TextCenter:true,
+                        PaddingText:0,
+                        PaddingIcon:18,
+                        varLoading:false, //If you want that the icon stay loading in some situation, just put a boolean variable
+                        TextLoading:"Loading",
+                        FontFamily:"Arial" //Tahoma, Verdana, Impact..
+                    },
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    //Não altere baixo
+                    //Do not change below
+                    With({
+                        PosicaoIcone:If(IsBlank(IconText),0,Round(Self.Width/2*-1 + Self.Height/2, 0)),
+                        TextX:
+                            If(TextCenter,
+                                "transform='translate(" &Round(Self.Height/2/2,0)+PaddingText & ", 0)' x='50%' text-anchor='middle'"
+                                ,
+                                "x='"&Self.Height + PaddingText&"'"
+                            ),
+                        TerminoSVG:"</g></svg>"
+                        },
+                    
+                        With({
+                            
+                        SVG_Loading:$"<svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 200 200' style='fill:{IconColor}' x='{PosicaoIcone}'><radialGradient id='a11' cx='.66' fx='.66' cy='.3125' fy='.3125' gradientTransform='scale(1.5)'><stop offset='0' stop-color='{IconColor}'></stop><stop offset='.3' stop-color='{IconColor}' stop-opacity='.9'></stop><stop offset='.6' stop-color='{IconColor}' stop-opacity='.6'></stop><stop offset='.8' stop-color='{IconColor}' stop-opacity='.3'></stop><stop offset='1' stop-color='{IconColor}' stop-opacity='0'></stop></radialGradient><circle transform-origin='center' fill='none' stroke='url(#a11)' stroke-width='15' stroke-linecap='round' stroke-dasharray='200 1000' stroke-dashoffset='0' cx='100' cy='100' r='70'><animateTransform type='rotate' attributeName='transform' calcMode='spline' dur='2' values='360;0' keyTimes='0;1' keySplines='0 0 1 1' repeatCount='indefinite'></animateTransform></circle><circle transform-origin='center' fill='none' opacity='.2' stroke='{IconColor}' stroke-width='15' stroke-linecap='round' cx='100' cy='100' r='70'></circle></svg>",
+                    
+                        InicioGrupoSvg:
+                            $"
+                            <svg xmlns='http://www.w3.org/2000/svg' width='0'>
+                            <g transform='translate(0,0)'>
+                                <text {TextX} y='50%' font-family='{FontFamily}' font-size='{TextSize}' fill='{TextColor}' alignment-baseline='middle' dy='0.10em'>{If(Self.Width>Self.Height,If(varLoading,TextLoading,IconText))}</text>",
+                            
+                        SVG_Ionic: $"<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 512 512' style='fill:{IconColor}' x='{PosicaoIcone}'>" & IconSVG
+                        
+                        }
+                    ,
+                    
+                    "data:image/svg+xml;utf8, " &  EncodeUrl(InicioGrupoSvg & Substitute(If(varLoading || IsBlank(IconSVG),SVG_Loading, SVG_Ionic),"#000",IconColor) & TerminoSVG)
+                    )
+                    )
+                    )
+                    
+                    /*
+                    "
+                    >
+                    Este ícone foi desenvolvido por Daniel Petrin (Mundo Power)
+                    
+                    www.mundopower.com.br
+                    
+                    > Em relação ao licenciamento dos ícones:
+                    
+                    The MIT License (MIT)
+                    
+                    Copyright (c) 2015-present Ionic (http://ionic.io/)
+                    
+                    Permission is hereby granted, free of charge, to any person obtaining a copy
+                    of this software and associated documentation files (the 'Software'), to deal
+                    in the Software without restriction, including without limitation the rights
+                    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                    copies of the Software, and to permit persons to whom the Software is
+                    furnished to do so, subject to the following conditions:
+                    
+                    "
+                    */
+                OnSelect: |-
+                    =Set(varLoading, true);
+                    UpdateContext({ctxNovaSolicitacao:true});
+                    Reset(Gallery_ControlePedidos);
+                    Set(varLoading, false);
+                PaddingBottom: =10
+                PaddingTop: =12.52
+                PressedBorderColor: =ColorFade(Cor.Primary,0.35)
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                TabIndex: =0
+                Width: =187.72
+                X: =225.15
+                ZIndex: =3
+
+            btn_Configurações As image:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: |
+                    =ColorFade(Cor.Primary,0.15)
+                DisabledBorderColor: =Cor.Disabled
+                DisabledFill: =Cor.Disabled
+                Fill: =Parent.Fill
+                FillPortions: =1
+                FocusedBorderThickness: =0
+                Height: =50
+                HoverBorderColor: |
+                    =ColorFade(Cor.Primary,0.15)
+                Image: |
+                    =With({
+                        IconSVG:
+                        "
+                        <path d='M256,176a80,80,0,1,0,80,80A80.24,80.24,0,0,0,256,176Zm172.72,80a165.53,165.53,0,0,1-1.64,22.34l48.69,38.12a11.59,11.59,0,0,1,2.63,14.78l-46.06,79.52a11.64,11.64,0,0,1-14.14,4.93l-57.25-23a176.56,176.56,0,0,1-38.82,22.67l-8.56,60.78A11.93,11.93,0,0,1,302.06,486H209.94a12,12,0,0,1-11.51-9.53l-8.56-60.78A169.3,169.3,0,0,1,151.05,393L93.8,416a11.64,11.64,0,0,1-14.14-4.92L33.6,331.57a11.59,11.59,0,0,1,2.63-14.78l48.69-38.12A174.58,174.58,0,0,1,83.28,256a165.53,165.53,0,0,1,1.64-22.34L36.23,195.54a11.59,11.59,0,0,1-2.63-14.78l46.06-79.52A11.64,11.64,0,0,1,93.8,96.31l57.25,23a176.56,176.56,0,0,1,38.82-22.67l8.56-60.78A11.93,11.93,0,0,1,209.94,26h92.12a12,12,0,0,1,11.51,9.53l8.56,60.78A169.3,169.3,0,0,1,361,119L418.2,96a11.64,11.64,0,0,1,14.14,4.92l46.06,79.52a11.59,11.59,0,0,1-2.63,14.78l-48.69,38.12A174.58,174.58,0,0,1,428.72,256Z'/></svg>
+                        "
+                        ,
+                        IconText:"Configurações",
+                        IconColor: TCor.TextInverted,
+                        TextColor:TCor.TextInverted,
+                        TextSize:16,
+                        TextCenter:true,
+                        PaddingText:0,
+                        PaddingIcon:18,
+                        varLoading:false, //If you want that the icon stay loading in some situation, just put a boolean variable
+                        TextLoading:"Loading",
+                        FontFamily:"Arial" //Tahoma, Verdana, Impact..
+                    },
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    //Não altere baixo
+                    //Do not change below
+                    With({
+                        PosicaoIcone:If(IsBlank(IconText),0,Round(Self.Width/2*-1 + Self.Height/2, 0)),
+                        TextX:
+                            If(TextCenter,
+                                "transform='translate(" &Round(Self.Height/2/2,0)+PaddingText & ", 0)' x='50%' text-anchor='middle'"
+                                ,
+                                "x='"&Self.Height + PaddingText&"'"
+                            ),
+                        TerminoSVG:"</g></svg>"
+                        },
+                    
+                        With({
+                            
+                        SVG_Loading:$"<svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 200 200' style='fill:{IconColor}' x='{PosicaoIcone}'><radialGradient id='a11' cx='.66' fx='.66' cy='.3125' fy='.3125' gradientTransform='scale(1.5)'><stop offset='0' stop-color='{IconColor}'></stop><stop offset='.3' stop-color='{IconColor}' stop-opacity='.9'></stop><stop offset='.6' stop-color='{IconColor}' stop-opacity='.6'></stop><stop offset='.8' stop-color='{IconColor}' stop-opacity='.3'></stop><stop offset='1' stop-color='{IconColor}' stop-opacity='0'></stop></radialGradient><circle transform-origin='center' fill='none' stroke='url(#a11)' stroke-width='15' stroke-linecap='round' stroke-dasharray='200 1000' stroke-dashoffset='0' cx='100' cy='100' r='70'><animateTransform type='rotate' attributeName='transform' calcMode='spline' dur='2' values='360;0' keyTimes='0;1' keySplines='0 0 1 1' repeatCount='indefinite'></animateTransform></circle><circle transform-origin='center' fill='none' opacity='.2' stroke='{IconColor}' stroke-width='15' stroke-linecap='round' cx='100' cy='100' r='70'></circle></svg>",
+                    
+                        InicioGrupoSvg:
+                            $"
+                            <svg xmlns='http://www.w3.org/2000/svg' width='0'>
+                            <g transform='translate(0,0)'>
+                                <text {TextX} y='50%' font-family='{FontFamily}' font-size='{TextSize}' fill='{TextColor}' alignment-baseline='middle' dy='0.10em'>{If(Self.Width>Self.Height,If(varLoading,TextLoading,IconText))}</text>",
+                            
+                        SVG_Ionic: $"<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 512 512' style='fill:{IconColor}' x='{PosicaoIcone}'>" & IconSVG
+                        
+                        }
+                    ,
+                    
+                    "data:image/svg+xml;utf8, " &  EncodeUrl(InicioGrupoSvg & Substitute(If(varLoading || IsBlank(IconSVG),SVG_Loading, SVG_Ionic),"#000",IconColor) & TerminoSVG)
+                    )
+                    )
+                    )
+                    
+                    /*
+                    "
+                    >
+                    Este ícone foi desenvolvido por Daniel Petrin (Mundo Power)
+                    
+                    www.mundopower.com.br
+                    
+                    > Em relação ao licenciamento dos ícones:
+                    
+                    The MIT License (MIT)
+                    
+                    Copyright (c) 2015-present Ionic (http://ionic.io/)
+                    
+                    Permission is hereby granted, free of charge, to any person obtaining a copy
+                    of this software and associated documentation files (the 'Software'), to deal
+                    in the Software without restriction, including without limitation the rights
+                    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                    copies of the Software, and to permit persons to whom the Software is
+                    furnished to do so, subject to the following conditions:
+                    
+                    "
+                    */
+                OnSelect: |-
+                    =Set(
+                        varLoading,
+                        true
+                    );
+                    Concurrent(
+                        Refresh(Credencial),
+                        Refresh(Clientes),
+                        Refresh(Vendedor)
+                    );
+                    Navigate(
+                        TelaConfigurações,
+                        ScreenTransition.Fade
+                    );
+                    Reset(Gallery_ControlePedidos)
+                PaddingBottom: =10
+                PaddingTop: =12.52
+                PressedBorderColor: =ColorFade(Cor.Primary,0.35)
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                TabIndex: =0
+                Width: =187.72
+                X: =225.15
+                ZIndex: =4
+
+            ctn_User As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.End
+                LayoutMinHeight: =Parent.Height
+                LayoutMinWidth: =400
+                LayoutMode: =LayoutMode.Auto
+                Width: =350
+                ZIndex: =5
+
+                img_User As image:
+                    AlignInContainer: =AlignInContainer.Center
+                    Height: =40
+                    Image: =User().Image
+                    RadiusBottomLeft: =40
+                    RadiusBottomRight: =40
+                    RadiusTopLeft: =40
+                    RadiusTopRight: =40
+                    Width: =Self.Height
+                    ZIndex: =1
+
+                lbl_User As label:
+                    Align: =Align.Center
+                    Color: =Cor.White
+                    Font: =Font.'Segoe UI'
+                    LayoutMinWidth: =200
+                    Size: =14
+                    Text: =Proper(varUsuario.Nome)
+                    Width: =300
+                    ZIndex: =2
+
+            ctn_Tema As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =10
+                LayoutJustifyContent: =LayoutJustifyContent.End
+                LayoutMinHeight: =Parent.Height
+                LayoutMinWidth: =200
+                LayoutMode: =LayoutMode.Auto
+                PaddingRight: =50
+                Width: =200
+                ZIndex: =7
+
+                img_Sun As image:
+                    AlignInContainer: =AlignInContainer.Center
+                    Height: =40
+                    Image: =sunny
+                    RadiusBottomLeft: =40
+                    RadiusBottomRight: =40
+                    RadiusTopLeft: =40
+                    RadiusTopRight: =40
+                    Width: =Self.Height
+                    ZIndex: =1
+
+                tgl_Tema As toggleSwitch:
+                    AlignInContainer: =AlignInContainer.Center
+                    BorderColor: =Cor.Border
+                    Color: =Cor.White
+                    FalseFill: =Cor.DisabledText
+                    FalseText: ="Light"
+                    FocusedBorderThickness: =0
+                    HandleFill: =Cor.TextInverted
+                    Height: =25
+                    LayoutMinHeight: =20
+                    LayoutMinWidth: =0
+                    OnChange: =
+                    OnCheck: |-
+                        =Set(varLoading, true);
+                        Set(
+                            varDark,
+                            true
+                        );
+                        If(
+                            varDark,
+                            Set(
+                                Cor,
+                                CoresDark
+                            ),
+                            Set(
+                                TCor,
+                                TextCoresDark
+                            ),
+                            Set(
+                                Cor,
+                                CoresLight
+                            ),
+                            Set(
+                                TCor,
+                                TextCoresLight
+                            )
+                        );
+                        Set(varLoading, false);
+                    OnUncheck: |-
+                        =Set(
+                            varDark,
+                            false
+                        );
+                        If(
+                            varDark,
+                            Set(
+                                Cor,
+                                CoresDark
+                            ),
+                            Set(
+                                TCor,
+                                TextCoresDark
+                            ),
+                            Set(
+                                Cor,
+                                CoresLight
+                            ),
+                            Set(
+                                TCor,
+                                TextCoresLight
+                            )
+                        )
+                    ShowLabel: =false
+                    Size: =0
+                    TrueFill: =Cor.Primary
+                    TrueText: ="Dark"
+                    Width: =50
+                    X: |
+                        =0
+                    ZIndex: =2
+
+                img_Dark As image:
+                    AlignInContainer: =AlignInContainer.Center
+                    Height: =35
+                    Image: =moon
+                    RadiusBottomLeft: =40
+                    RadiusBottomRight: =40
+                    RadiusTopLeft: =40
+                    RadiusTopRight: =40
+                    Width: =Self.Height
+                    ZIndex: =3
+
+        ctn_GalleryControleChaves As groupContainer.verticalAutoLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            DropShadow: =DropShadow.Semibold
+            Fill: =Cor.BackgroundScreen
+            Height: =Parent.Height-Self.Y*2
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =10
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =Parent.Width-Self.X*2
+            ZIndex: =2
+
+            ctn_FilterControleChaves As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Start
+                Fill: =Cor.BackgroundStandard
+                FillPortions: =0
+                Height: =120
+                LayoutGap: =10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =20
+                PaddingLeft: =20
+                PaddingRight: =20
+                PaddingTop: =20
+                Width: =Parent.Width-Self.X*2
+                ZIndex: =1
+
+                ctn_FilterSolicitacao As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    DropShadow: =DropShadow.None
+                    Fill: =Cor.BackgroundStandard
+                    Height: =Parent.Height-Self.Y*2
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =0
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =300
+                    ZIndex: =1
+
+                    lbl_FilterSolicitacao As label:
+                        BorderColor: =Cor.Border
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        Height: =30
+                        Size: =10
+                        Text: ="Número do Lote"
+                        Width: =200
+                        ZIndex: =1
+
+                    inpt_FilterSolicitacao As text:
+                        BorderColor: =Cor.Border
+                        BorderThickness: =1
+                        Clear: =true
+                        Color: =Cor.TextStandard
+                        Default: =
+                        DelayOutput: =true
+                        DisabledBorderColor: =Cor.Disabled
+                        DisabledColor: =Cor.DisabledText
+                        DisabledFill: =Cor.Disabled
+                        Fill: =Cor.BackgroundInput
+                        FocusedBorderThickness: =1
+                        Format: =TextFormat.Number
+                        HintText: ="🔎 N°..."
+                        HoverBorderColor: =Cor.Border
+                        HoverColor: =Cor.TextStandard
+                        HoverFill: =Cor.BackgroundInputHover
+                        LayoutMinWidth: =0
+                        Size: =10
+                        ZIndex: =2
+
+                ctn_FilterDataSolicitacao As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    Fill: =Cor.BackgroundStandard
+                    Height: =Parent.Height-Self.Y*2
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =5
+                    LayoutMinHeight: =0
+                    LayoutMinWidth: =295
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: |
+                        =300
+                    ZIndex: =2
+
+                    lbl_FilterDataSolicitacao As label:
+                        Align: =Align.Center
+                        BorderColor: =Cor.Border
+                        BorderStyle: =BorderStyle.None
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        Height: =20
+                        LayoutMinWidth: =270
+                        Size: =10
+                        Text: ="Intervalo de Data do Pedido"
+                        Width: =200
+                        ZIndex: =1
+
+                    ctn_FilterData As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
+                        LayoutGap: =10
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =5
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        Width: =Parent.Width
+                        ZIndex: =4
+
+                        date_FilterDataSolicitacaoInicial As datepicker:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =Cor.Border
+                            BorderThickness: =1
+                            CalendarHeaderFill: =Cor.Primary
+                            Color: =Cor.TextStandard
+                            DefaultDate: =Today()-60
+                            DisabledBorderColor: =Cor.Disabled
+                            DisabledColor: =Cor.DisabledText
+                            DisabledFill: =Cor.Disabled
+                            Fill: =Cor.BackgroundInput
+                            FillPortions: =1
+                            FocusedBorderThickness: =1
+                            HoverDateFill: =Color.Red
+                            IconBackground: =Cor.BackgroundInput
+                            IconFill: =Cor.TextStandard
+                            LayoutMinWidth: =130
+                            SelectedDateFill: =Cor.Primary
+                            Size: =10
+                            Width: =320
+                            ZIndex: =1
+
+                        date_FilterDataSolicitacaoFinal As datepicker:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =Cor.Border
+                            BorderThickness: =1
+                            CalendarHeaderFill: =Cor.Primary
+                            Color: =Cor.TextStandard
+                            DisabledBorderColor: =Cor.Disabled
+                            DisabledColor: =Cor.DisabledText
+                            DisabledFill: =Cor.Disabled
+                            Fill: =Cor.BackgroundInput
+                            FillPortions: =1
+                            FocusedBorderThickness: =1
+                            HoverDateFill: =Color.Red
+                            IconBackground: =Cor.BackgroundInput
+                            IconFill: =Cor.TextStandard
+                            LayoutMinWidth: =130
+                            SelectedDateFill: =Cor.Primary
+                            Size: =10
+                            Width: =130
+                            ZIndex: =2
+
+                ctn_FilterChave As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    Fill: =Cor.BackgroundStandard
+                    Height: =Parent.Height-Self.Y*2
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =0
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =150
+                    ZIndex: =3
+
+                    lbl_FilterChave As label:
+                        BorderColor: =Cor.Border
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        Height: =30
+                        Size: =10
+                        Text: ="Pesquisar Cliente"
+                        Width: =200
+                        ZIndex: =1
+
+                    inpt_FilterChave As text:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =Cor.Border
+                        BorderThickness: =1
+                        Clear: =true
+                        Color: =Cor.TextStandard
+                        Default: =
+                        DelayOutput: =true
+                        DisabledBorderColor: =Cor.Disabled
+                        DisabledColor: =Cor.DisabledText
+                        DisabledFill: =Cor.Disabled
+                        Fill: =Cor.BackgroundInput
+                        FocusedBorderThickness: =1
+                        HintText: ="🔎 Chave..."
+                        HoverBorderColor: =Cor.Border
+                        HoverColor: =Cor.TextStandard
+                        HoverFill: =Cor.BackgroundInputHover
+                        LayoutMinWidth: =0
+                        Size: =10
+                        ZIndex: =2
+
+                ctn_FilterColaborador As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    Fill: =Cor.BackgroundStandard
+                    Height: =Parent.Height-Self.Y*2
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =0
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =300
+                    ZIndex: =4
+
+                    lbl_FilterColaborador As label:
+                        BorderColor: =Cor.Border
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        Height: =30
+                        Size: =10
+                        Text: ="Pesquisar Cidade"
+                        Width: =200
+                        ZIndex: =1
+
+                    inpt_FilterColaborador As text:
+                        BorderColor: =Cor.Border
+                        BorderThickness: =1
+                        Clear: =true
+                        Color: =Cor.TextStandard
+                        Default: =
+                        DelayOutput: =true
+                        DisabledBorderColor: =Cor.Disabled
+                        DisabledColor: =Cor.DisabledText
+                        DisabledFill: =Cor.Disabled
+                        Fill: =Cor.BackgroundInput
+                        FocusedBorderThickness: =1
+                        HintText: ="🔎 Cidadee..."
+                        HoverBorderColor: =Cor.Border
+                        HoverColor: =Cor.TextStandard
+                        HoverFill: =Cor.BackgroundInputHover
+                        LayoutMinWidth: =0
+                        Size: =10
+                        ZIndex: =2
+
+                ctn_FilterStatus As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    Fill: =Cor.BackgroundStandard
+                    Height: =Parent.Height-Self.Y*2
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =200
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: |
+                        =300
+                    ZIndex: =5
+
+                    lbl_FilterStatus As label:
+                        BorderColor: =Cor.Border
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        Height: =30
+                        Size: =10
+                        Text: ="Status"
+                        Width: =200
+                        ZIndex: =1
+
+                    cbb_FilterStatus As combobox:
+                        BorderColor: =Cor.Border
+                        BorderThickness: =1
+                        ChevronBackground: =Cor.BackgroundInput
+                        ChevronDisabledBackground: =Cor.Disabled
+                        ChevronDisabledFill: =Cor.Disabled
+                        ChevronFill: =Cor.TextStandard
+                        ChevronHoverBackground: =Cor.BackgroundInput
+                        ChevronHoverFill: =Cor.TextStandard
+                        Color: =Cor.TextStandard
+                        DefaultSelectedItems: =["Todos"]
+                        DisabledBorderColor: =Cor.Disabled
+                        DisabledColor: =Cor.DisabledText
+                        DisabledFill: =Cor.Disabled
+                        DisplayFields: =["Value"]
+                        Fill: =Cor.BackgroundInput
+                        FocusedBorderThickness: =1
+                        HoverColor: =Cor.TextStandard
+                        HoverFill: =Cor.BackgroundInputHover
+                        IsSearchable: =false
+                        Items: =["Todos", "Concluído", "Pendente Análise", "Rejeitado"]
+                        LayoutMinWidth: =0
+                        PressedColor: =Cor.TextStandard
+                        PressedFill: =ColorFade(Self.HoverFill, 20%)
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectionColor: =Cor.TextInverted
+                        SelectionFill: =Cor.Primary
+                        SelectMultiple: =false
+                        Size: =10
+                        Width: =320
+                        ZIndex: =3
+
+                ctn_Acao As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    Fill: =Cor.BackgroundStandard
+                    Height: =Parent.Height-Self.Y*2
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =0
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =1
+                    PaddingLeft: =1
+                    PaddingRight: =1
+                    PaddingTop: =1
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =150
+                    ZIndex: =6
+
+                    lbl_Acao As label:
+                        BorderColor: =Cor.Border
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        Height: =30
+                        Size: =10
+                        Text: ="Ação"
+                        Width: =100
+                        ZIndex: =1
+
+                    ctn_BotoesAcao As groupContainer.horizontalAutoLayoutContainer:
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
+                        LayoutGap: =10
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =0
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =6
+
+                        btn_LimparFiltros As button:
+                            BorderColor: =Self.Fill
+                            BorderThickness: =Metadados.EspessuraBordaBotao
+                            Color: =Cor.TextInverted
+                            DisabledBorderColor: =Cor.Disabled
+                            DisabledColor: =Cor.DisabledText
+                            DisabledFill: =Cor.DisabledButton
+                            Fill: =Cor.Primary
+                            FillPortions: =1
+                            FocusedBorderThickness: =Metadados.EspessuraBordaBotao
+                            Height: =35
+                            HoverBorderColor: =Self.HoverFill
+                            HoverColor: =Self.Color
+                            HoverFill: =ColorFade(Self.Fill, -10%)
+                            LayoutMinWidth: =0
+                            OnSelect: |-
+                                =Concurrent(
+                                    Reset(inpt_FilterChave),
+                                    Reset(inpt_FilterColaborador),
+                                    Reset(inpt_FilterSolicitacao),
+                                    Reset(date_FilterDataSolicitacaoInicial),
+                                    Reset(cbb_FilterStatus)
+                                )
+                            PressedBorderColor: =Self.PressedFill
+                            PressedColor: =Self.Color
+                            PressedFill: =ColorFade(Self.Fill, -30%)
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Size: =10
+                            Text: ="Limpar"
+                            Width: =50
+                            ZIndex: =1
+
+                        btn_AtualizarGallery As button:
+                            BorderColor: =Self.Fill
+                            BorderThickness: =Metadados.EspessuraBordaBotao
+                            Color: =Cor.TextInverted
+                            DisabledBorderColor: =Cor.Disabled
+                            DisabledColor: =Cor.DisabledText
+                            DisabledFill: =Cor.DisabledButton
+                            Fill: =Cor.Primary
+                            FillPortions: =1
+                            FocusedBorderThickness: =Metadados.EspessuraBordaBotao
+                            Height: =35
+                            HoverBorderColor: =Self.HoverFill
+                            HoverColor: =Self.Color
+                            HoverFill: =ColorFade(Self.Fill, -10%)
+                            LayoutMinWidth: =0
+                            OnSelect: |-
+                                =Set(varLoading, true);
+                                Concurrent(
+                                    Refresh(Clientes),
+                                    Refresh(EnderecoCliente),
+                                    Refresh(ImagensReferencia),
+                                    Refresh(LotePedidos),
+                                    Refresh(Pedidos),
+                                    Refresh(Referencias),
+                                    Refresh(Vendedor),
+                                    Reset(Gallery_ControlePedidos)
+                                );
+                                Set(varLoading, false)
+                            PressedBorderColor: =Self.PressedFill
+                            PressedColor: =Self.Color
+                            PressedFill: =ColorFade(Self.Fill, -30%)
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Size: =10
+                            Text: ="Atualizar"
+                            ZIndex: =2
+
+                        btn_AtualizarGallery_1 As button:
+                            BorderColor: =Self.Fill
+                            BorderThickness: =Metadados.EspessuraBordaBotao
+                            Color: =Cor.TextInverted
+                            DisabledBorderColor: =Cor.Disabled
+                            DisabledColor: =Cor.DisabledText
+                            DisabledFill: =Cor.DisabledButton
+                            Fill: =Cor.Primary
+                            FillPortions: =1
+                            FocusedBorderThickness: =Metadados.EspessuraBordaBotao
+                            Height: =35
+                            HoverBorderColor: =Self.HoverFill
+                            HoverColor: =Self.Color
+                            HoverFill: =ColorFade(Self.Fill, -10%)
+                            LayoutMinWidth: =0
+                            OnSelect: |-
+                                =Set(varLoading, true);
+                                UpdateContext({ConteinerRelatorio: true});
+                                Set(varLoading, false)
+                            PressedBorderColor: =Self.PressedFill
+                            PressedColor: =Self.Color
+                            PressedFill: =ColorFade(Self.Fill, -30%)
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Size: =10
+                            Text: ="Relatório"
+                            ZIndex: =3
+
+            ctn_ItemsControleChaves As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                Fill: =Cor.BackgroundStandard
+                Height: =155
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =10
+                PaddingLeft: =20
+                PaddingRight: =20
+                PaddingTop: =20
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Width: =Parent.Width-Self.X*2
+                ZIndex: =2
+
+                ctn_CabecalhoGallery As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    Fill: =Cor.Transparent
+                    FillPortions: =0
+                    Height: =40
+                    LayoutGap: =10
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =25
+                    PaddingRight: =20
+                    Width: =Parent.Width-Self.X*2
+                    ZIndex: =2
+
+                    lbl_NSolicitacao_CabecalhoControleChaves As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =Cor.Border
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        FontWeight: =FontWeight.Semibold
+                        LayoutMinHeight: =0
+                        LayoutMinWidth: =75
+                        Size: =12
+                        Text: ="N° do Lote"
+                        Width: =100
+                        ZIndex: =1
+
+                    lbl_DataSolicitacao_CabecalhoControleChaves As label:
+                        Align: =Align.Center
+                        AlignInContainer: =AlignInContainer.Start
+                        BorderColor: =Cor.Border
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
+                        FontWeight: =FontWeight.Semibold
+                        LayoutMinHeight: =0
+                        Size: =12
+                        Text: ="Data do Pedido"
+                        Width: =140
+                        ZIndex: =2
+
+                    lbl_Chave_CabecalhoControleChaves As label:
+                        Align: =Align.Center
+                        BorderColor: =Cor.Border
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
+                        FontWeight: =FontWeight.Semibold
+                        LayoutMinHeight: =0
+                        Size: =12
+                        Text: ="Cliente"
+                        Width: =80
+                        ZIndex: =3
+
+                    lbl_Local_CabecalhoControleChaves As label:
+                        Align: =Align.Center
+                        BorderColor: =Cor.Border
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
+                        FontWeight: =FontWeight.Semibold
+                        LayoutMinHeight: =0
+                        Size: =12
+                        Text: ="Cidade"
+                        Width: =100
+                        ZIndex: =4
+
+                    lbl_Area_CabecalhoControleChaves As label:
+                        Align: =Align.Center
+                        BorderColor: =Cor.Border
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
+                        FontWeight: =FontWeight.Semibold
+                        LayoutMinHeight: =0
+                        Size: =12
+                        Text: ="Valor Total"
+                        ZIndex: =5
+
+                    lbl_Solicitante_CabecalhoControleChaves As label:
+                        Align: =Align.Center
+                        BorderColor: =Cor.Border
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
+                        FontWeight: =FontWeight.Semibold
+                        LayoutMinHeight: =0
+                        Size: =12
+                        Text: ="Quantidade de Peças"
+                        Width: =200
+                        ZIndex: =6
+
+                    lbl_ResponsavelRetirada_CabecalhoControleChaves As label:
+                        Align: =Align.Center
+                        BorderColor: =Cor.Border
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
+                        FontWeight: =FontWeight.Semibold
+                        LayoutMinHeight: =0
+                        Size: =12
+                        Text: ="Data de Faturamento"
+                        Width: =200
+                        ZIndex: =7
+
+                    lbl_Status_CabecalhoControleChaves As label:
+                        Align: =Align.Center
+                        BorderColor: =Cor.Border
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
+                        FontWeight: =FontWeight.Semibold
+                        LayoutMinHeight: =0
+                        Size: =12
+                        Text: ="Status"
+                        Width: =120
+                        ZIndex: =8
+
+                    lbl_Acoes_CabecalhoControleChaves As label:
+                        Align: =Align.Center
+                        BorderColor: =Cor.Border
+                        Color: =Cor.TextStandard
+                        DisabledColor: =Cor.DisabledText
+                        FillPortions: =1
+                        FontWeight: =FontWeight.Semibold
+                        LayoutMinHeight: =0
+                        Size: =12
+                        Text: ="Ações"
+                        ZIndex: =9
+
+                Gallery_ControlePedidos As gallery.galleryVertical:
+                    '#CopilotOverlayLabel': ="Filtrada"
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =Cor.Border
+                    BorderStyle: =BorderStyle.None
+                    DelayItemLoading: =true
+                    Height: =100
+                    Items: =LotePedidos
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    Selectable: =false
+                    TabIndex: =0
+                    TemplateFill: =
+                    TemplateSize: =65
+                    Width: =Parent.Width-Self.X*2
+                    ZIndex: =3
+
+                    ctn_Fundo_Pedidos As groupContainer.manualLayoutContainer:
+                        Height: =60
+                        Width: =1850
+                        X: =10
+                        Y: =10
+                        ZIndex: =1
+
+                    ctn_ItemsGalleryControleChaves As groupContainer.horizontalAutoLayoutContainer:
+                        Fill: =Cor.BackgroundScreen
+                        Height: =ctn_Fundo_Pedidos.Height
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutGap: =10
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =10
+                        PaddingRight: =20
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Width: =Parent.Width-20
+                        X: =10
+                        Y: =ctn_Fundo_Pedidos.Y
+                        ZIndex: =2
+
+                        btn_FundoID As button:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =Self.Fill
+                            BorderThickness: =Metadados.EspessuraBordaBotao
+                            Color: =Cor.TextInverted
+                            DisabledBorderColor: =Cor.Disabled
+                            DisabledColor: =Cor.DisabledText
+                            DisabledFill: =Cor.DisabledButton
+                            DisplayMode: =DisplayMode.View
+                            Fill: =Cor.Primary
+                            FocusedBorderThickness: =Metadados.EspessuraBordaBotao
+                            Height: =30
+                            HoverBorderColor: =Self.HoverFill
+                            HoverColor: =Self.Color
+                            HoverFill: =ColorFade(Self.Fill, -10%)
+                            LayoutMinHeight: =0
+                            LayoutMinWidth: =75
+                            PressedBorderColor: =Self.PressedFill
+                            PressedColor: =Self.Color
+                            PressedFill: =ColorFade(Self.Fill, -30%)
+                            RadiusBottomLeft: =5
+                            RadiusBottomRight: =5
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =5
+                            Size: =10
+                            Text: =ThisItem.ID
+                            Width: =100
+                            ZIndex: =1
+
+                        lbl_DataSolicitacao_GalleryControleChaves As label:
+                            Align: =Align.Center
+                            BorderColor: =Cor.Border
+                            Color: =Cor.TextStandard
+                            DisabledColor: =Cor.DisabledText
+                            FillPortions: =1
+                            Size: =10
+                            Text: =Text(ThisItem.Criado, "dd/mm/yyyy")
+                            Width: =100
+                            ZIndex: =3
+
+                        lbl_Chave_GalleryControleChaves As label:
+                            Align: =Align.Center
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =Cor.Border
+                            Color: =Cor.TextStandard
+                            DisabledColor: =Cor.DisabledText
+                            FillPortions: =1
+                            Size: =10
+                            Text: =LookUp(Clientes, Value(ThisItem.IDCliente) = ID, Nome)
+                            Width: =80
+                            ZIndex: =4
+
+                        lbl_Local_GalleryControleChaves As label:
+                            Align: =Align.Center
+                            BorderColor: =Cor.Border
+                            Color: =Cor.TextStandard
+                            DisabledColor: =Cor.DisabledText
+                            FillPortions: =1
+                            Size: =10
+                            Text: =LookUp(EnderecoCliente, ThisItem.IDCliente = IDCliente, Cidade)
+                            Width: =100
+                            ZIndex: =5
+
+                        lbl_Area_GalleryControleChaves As label:
+                            Align: =Align.Center
+                            BorderColor: =Cor.Border
+                            Color: =Cor.TextStandard
+                            DisabledColor: =Cor.DisabledText
+                            FillPortions: =1
+                            Size: =10
+                            Text: =ThisItem.ValorTotal
+                            ZIndex: =6
+
+                        lbl_Solicitante_GalleryControleChaves As label:
+                            Align: =Align.Center
+                            BorderColor: =Cor.Border
+                            Color: =Cor.TextStandard
+                            DisabledColor: =Cor.DisabledText
+                            FillPortions: =1
+                            Size: =10
+                            Text: =ThisItem.Quantidade
+                            Width: =200
+                            ZIndex: =7
+
+                        lbl_ResponsavelRetirada_GalleryControleChaves As label:
+                            Align: =Align.Center
+                            BorderColor: =Cor.Border
+                            Color: =Cor.TextStandard
+                            DisabledColor: =Cor.DisabledText
+                            FillPortions: =1
+                            Size: =10
+                            Text: =ThisItem.DataFaturamento
+                            Width: =200
+                            ZIndex: =8
+
+                        btn_Status_Pedidos As button:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderThickness: =0
+                            DisabledColor: =RGBA(255, 255, 255, 1)
+                            DisabledFill: |-
+                                =If(
+                                    ThisItem.Status = "Pendente Análise",
+                                    RGBA(
+                                        255,
+                                        162,
+                                        0,
+                                        1
+                                    ),
+                                    If(
+                                        ThisItem.Status = "Pendente Retirada",
+                                        RGBA(
+                                            0,
+                                            166,
+                                            251,
+                                            1
+                                        ),
+                                        If(
+                                            ThisItem.Status = "Concluído",
+                                            RGBA(
+                                                167,
+                                                201,
+                                                87,
+                                                1
+                                            ),
+                                            If(
+                                                ThisItem.Status = "Rejeitado",
+                                                RGBA(
+                                                    240,
+                                                    31,
+                                                    55,
+                                                    1
+                                                ),
+                                                If(
+                                                    ThisItem.Status = "Aguardando Devolução",
+                                                    Color.LightSeaGreen,
+                                                    Color.Gray
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            DisplayMode: =DisplayMode.Disabled
+                            Fill: =
+                            FontWeight: =FontWeight.Normal
+                            HoverFill: =
+                            OnSelect: =
+                            RadiusBottomLeft: =6
+                            RadiusBottomRight: =6
+                            RadiusTopLeft: =6
+                            RadiusTopRight: =6
+                            Size: =10
+                            Text: =ThisItem.Status
+                            Width: =120
+                            X: =1026
+                            Y: =10
+                            ZIndex: =9
+
+                        ctn_Ações As groupContainer.horizontalAutoLayoutContainer:
+                            BorderStyle: =BorderStyle.None
+                            DropShadow: =DropShadow.None
+                            Fill: =Cor.BackgroundScreen
+                            Height: =60
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                            LayoutMinHeight: =0
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Width: =205
+                            X: =1654
+                            Y: =10
+                            ZIndex: =10
+
+                            icn_VisualizarSolicitacao As icon.Edit:
+                                BorderColor: =Cor.Border
+                                Color: =Cor.Primary
+                                DisabledBorderColor: =Cor.Disabled
+                                DisabledColor: =Cor.Disabled
+                                FocusedBorderThickness: =0
+                                Height: =40
+                                HoverColor: =ColorFade(Self.Color, 10%)
+                                HoverFill: =Cor.TransparentLight
+                                Icon: =Icon.View
+                                LayoutMinWidth: =40
+                                OnSelect: |-
+                                    =UpdateContext({ctxRegistroSelecionado: ThisItem});
+                                    UpdateContext({ctxVisualizarSolicitacao: true})
+                                PaddingBottom: =10
+                                PaddingLeft: |
+                                    =10
+                                PaddingRight: =10
+                                PaddingTop: =10
+                                Width: =45
+                                X: =1099
+                                ZIndex: =1
+
+                            icn_EditarSolicitacao As icon.Edit:
+                                BorderColor: =Cor.Border
+                                Color: =Cor.Primary
+                                DisabledBorderColor: =Cor.Disabled
+                                DisabledColor: =Cor.Disabled
+                                FocusedBorderThickness: =0
+                                Height: =45
+                                HoverColor: =ColorFade(Self.Color, 10%)
+                                HoverFill: =Cor.TransparentLight
+                                Icon: =Icon.Edit
+                                LayoutMinWidth: =40
+                                OnSelect: |-
+                                    =UpdateContext({ctxRegistroSelecionado: ThisItem});
+                                    UpdateContext({ctxEditarSolicitacao: true})
+                                PaddingBottom: =10
+                                PaddingLeft: =10
+                                PaddingRight: =10
+                                PaddingTop: =10
+                                Width: =54
+                                X: =54
+                                ZIndex: =2
+
+                            icn_ExcluirSolicitacao As icon.Edit:
+                                BorderColor: =Cor.Border
+                                Color: =Cor.Primary
+                                DisabledBorderColor: =Cor.Disabled
+                                DisabledColor: =Cor.Disabled
+                                FocusedBorderThickness: =0
+                                Height: =45
+                                HoverColor: =ColorFade(Self.Color, 10%)
+                                HoverFill: =Cor.TransparentLight
+                                Icon: =Icon.Trash
+                                LayoutMinWidth: =40
+                                OnSelect: |-
+                                    =Concurrent(
+                                        UpdateContext({ctxRegistroSelecionado: ThisItem}),
+                                        UpdateContext({ctxExcluirSolicitacao: true})
+                                    )
+                                PaddingBottom: =10
+                                PaddingLeft: |
+                                    =10
+                                PaddingRight: =10
+                                PaddingTop: =10
+                                Width: =54
+                                X: =162
+                                ZIndex: =3
+
+    con_EnviarRelatorio As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.48)
+        Height: =Parent.Height
+        Visible: =ConteinerRelatorio
+        Width: =Parent.Width
+        ZIndex: =2
+
+        con_GerarRelatorio As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Regular
+            Fill: =Cor.BackgroundStandard
+            Height: =356
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Visible: =ConteinerRelatorio
+            Width: =Parent.Width*0.25
+            X: =(Parent.Width - Self.Width)/2
+            Y: =(Parent.Height - Self.Height)/2
+            ZIndex: =1
+
+            txt_Relatorio As label:
+                Align: =Align.Center
+                Color: =Cor.TextStandard
+                Height: =67
+                Text: ="Selecione o range de datas e a filial abaixo para exportação do relatório em csv"
+                Width: =440
+                X: =12
+                Y: =56
+                ZIndex: =1
+
+            txt_GerarRelatorio As label:
+                Align: =Align.Center
+                Color: =Cor.TextStandard
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                Size: =25
+                Text: ="Gerar Relatório"
+                Width: =267
+                X: =99
+                Y: =12
+                ZIndex: =11
+
+            grp_BotoesRelatorio As group:
+                Height: =5
+                Width: =5
+                X: =4
+                Y: =-43
+                ZIndex: =12
+
+                btn_CancelarRelatorio As button:
+                    BorderColor: |
+                        =ColorFade(Self.Fill,0.15)
+                    BorderThickness: =0
+                    Fill: =Cor.Cancel
+                    FocusedBorderThickness: =2
+                    Height: =39
+                    HoverBorderColor: |
+                        =ColorFade(Self.Fill,0.35)
+                    HoverFill: |
+                        =ColorFade(Self.Fill,0.15)
+                    OnSelect: =Select(ico_FecharRelatorio)
+                    PressedBorderColor: |
+                        =ColorFade(Self.Fill,0.15)
+                    RadiusBottomLeft: =6
+                    RadiusBottomRight: =6
+                    RadiusTopLeft: =6
+                    RadiusTopRight: =6
+                    Text: ="Cancelar"
+                    Width: =132
+                    X: =69
+                    Y: =249
+                    ZIndex: =2
+
+                btn_EnviarRelatorio As button:
+                    BorderColor: =ColorFade(Cor.Primary,0.15)
+                    BorderThickness: =0
+                    Fill: =RGBA(39, 113, 194, 1)
+                    FocusedBorderColor: =
+                    FocusedBorderThickness: =2
+                    Height: =39
+                    HoverColor: =ColorFade(Self.Color, 20%)
+                    HoverFill: =ColorFade(Self.Fill,-20%)
+                    OnSelect: |-
+                        =Set(
+                            varLoading,
+                            true
+                        );
+                        If(
+                            IsBlank(dte_DataInicial.SelectedDate) || IsBlank(dte_DataFinal.SelectedDate),
+                            Notify(
+                                "Por favor, selecione datas válidas antes de enviar o relatório.",
+                                NotificationType.Error
+                            ),
+                            Notify(
+                                "Relatório CSV está sendo gerado e será enviado para o seu Email. Dependendo da quantidade de dados, pode demorar alguns minutos",
+                                NotificationType.Success,
+                                2000
+                            );
+                            Select(ico_FecharRelatorio)
+                        );
+                        Set(
+                            varLoading,
+                            false
+                        )
+                    RadiusBottomLeft: =6
+                    RadiusBottomRight: =6
+                    RadiusTopLeft: =6
+                    RadiusTopRight: =6
+                    Text: ="Enviar Relatório"
+                    Width: =171
+                    X: =224
+                    Y: =249
+                    ZIndex: =3
+
+            shp_LinhaSuperiorRelatorio As rectangle:
+                Fill: =RGBA(202, 202, 202, 1)
+                Height: =1
+                Width: =440
+                X: =12
+                Y: =120
+                ZIndex: =14
+
+            grp_FecharRelatorio As group:
+                Height: =5
+                Width: =5
+                X: =-634
+                Y: =26
+                ZIndex: =14
+
+                rtn_FecharRelatorio As button:
+                    BorderThickness: =0
+                    Fill: =RGBA(240, 108, 108, 1)
+                    FocusedBorderThickness: =0
+                    Height: =30
+                    HoverBorderColor: =RGBA(240, 108, 108, 1)
+                    HoverColor: =RGBA(240, 108, 108, 1)
+                    HoverFill: =RGBA(240, 108, 108, 1)
+                    OnSelect: |-
+                        =Concurrent(
+                            UpdateContext({ConteinerRelatorio: false}),
+                            Reset(dte_DataFinal),
+                            Reset(dte_DataInicial)
+                        )
+                    RadiusBottomLeft: =6
+                    RadiusBottomRight: =6
+                    RadiusTopLeft: =6
+                    RadiusTopRight: =6
+                    TabIndex: =1
+                    Text: =""
+                    Width: =30
+                    X: =422
+                    Y: =12
+                    ZIndex: =12
+
+                ico_FecharRelatorio As icon.Cancel:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =22
+                    Icon: =Icon.Cancel
+                    OnSelect: |-
+                        =Concurrent(
+                            UpdateContext({ConteinerRelatorio: false}),
+                            Reset(dte_DataFinal),
+                            Reset(dte_DataInicial)
+                        )
+                    TabIndex: =1
+                    Width: =22
+                    X: =426
+                    Y: =16
+                    ZIndex: =13
+
+            shp_LinhaInferiorRelatorio As rectangle:
+                Fill: =RGBA(202, 202, 202, 1)
+                Height: =1
+                Width: =440
+                X: =12
+                Y: =233
+                ZIndex: =15
+
+            Group5 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =16
+
+                btn_DataInicial As button:
+                    BorderColor: =Cor.Border
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FocusedBorderThickness: =2
+                    Height: =34
+                    HoverBorderColor: =Cor.Border
+                    HoverFill: =
+                    PressedBorderColor: =Cor.Border
+                    RadiusBottomLeft: =6
+                    RadiusBottomRight: =6
+                    RadiusTopLeft: =6
+                    RadiusTopRight: =6
+                    Text: =""
+                    Width: =180
+                    X: =35
+                    Y: =168
+                    ZIndex: =4
+
+                dte_DataInicial As datepicker:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DefaultDate: =Today()-90
+                    Height: =27
+                    IconBackground: =
+                    IconFill: =RGBA(166, 166, 166, 100)
+                    InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Date(2024,01,01), Self.Format, Self.Language))
+                    PaddingLeft: =10
+                    PaddingTop: =5
+                    Width: =155
+                    X: =46
+                    Y: =171
+                    ZIndex: =5
+
+                txt_DataInicial As label:
+                    Align: =Align.Center
+                    Color: =Cor.TextStandard
+                    FontWeight: =FontWeight.Semibold
+                    Height: =22
+                    Italic: =true
+                    OnSelect: =
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =14
+                    Text: ="Data Inicial"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =180
+                    X: =35
+                    Y: =137
+                    ZIndex: =6
+
+                btn_DataFinal As button:
+                    BorderColor: =Cor.Border
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FocusedBorderThickness: =2
+                    Height: =34
+                    HoverBorderColor: =Cor.Border
+                    HoverFill: =
+                    PressedBorderColor: =Cor.Border
+                    RadiusBottomLeft: =6
+                    RadiusBottomRight: =6
+                    RadiusTopLeft: =6
+                    RadiusTopRight: =6
+                    Text: =""
+                    Width: =180
+                    X: =246
+                    Y: =168
+                    ZIndex: =7
+
+                dte_DataFinal As datepicker:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Height: =27
+                    IconBackground: =
+                    IconFill: =RGBA(166, 166, 166, 100)
+                    InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Date(2024,01,01), Self.Format, Self.Language))
+                    PaddingLeft: =10
+                    PaddingTop: =5
+                    Width: =167
+                    X: =253
+                    Y: =172
+                    ZIndex: =9
+
+                txt_DataFinal As label:
+                    Align: =Align.Center
+                    Color: =Cor.TextStandard
+                    FontWeight: =FontWeight.Semibold
+                    Height: =22
+                    Italic: =true
+                    OnSelect: =
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =14
+                    Text: ="Data Final"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =180
+                    X: =246
+                    Y: =137
+                    ZIndex: =10
+
+    ctn_Loading_Pedidos As groupContainer.manualLayoutContainer:
+        Fill: =If(varDark, RGBA(204, 204, 204, 0.4), RGBA(204, 204, 204, 0.8))
+        Height: =Parent.Height
+        Visible: =varLoading
+        Width: =Parent.Width
+        ZIndex: =3
+
+        img_Loading_Pedidos As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            Height: =Parent.Height
+            Image: ='product-loading'
+            Width: =Parent.Width
+            ZIndex: =1
+
